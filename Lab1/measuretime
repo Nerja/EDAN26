@@ -1,0 +1,13 @@
+S=200000
+V=20000
+U=4
+A=100
+T=4
+P=0
+
+javac Dataflow.java && java -Xmx8048M Dataflow $S $V $U $A $T $P > out_seq
+javac FastDataflow.java && java -Xmx8048M FastDataflow $S $V $U $A $T $P > out_par
+head -n +8 out_par
+head -n +8 out_seq
+rm out_par
+rm out_seq
