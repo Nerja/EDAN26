@@ -1,0 +1,9 @@
+nsym = 10000
+nvertex = 1000
+maxsucc = 4
+nactive = 100
+generating CFG...
+generating usedefs...
+computing liveness...
+T = 0.310839107 s
+use[0] = { 26 225 241 556 864 927 1027 1044 1152 1175 1378 1420 1519 1656 1934 1961 1971 2015 2076 2345 2469 2596 2630 2696 2789 3286 3363 
