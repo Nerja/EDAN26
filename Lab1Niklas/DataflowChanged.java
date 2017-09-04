@@ -66,9 +66,11 @@ class Vertex {
 		}
 		if (!in.equals(old)) {
 			pred.forEach(v -> {
-				if(!v.isListed()) {
-					worklist.add(v);
-					v.setListed(true);
+				synchronized(v) {
+					if(!v.isListed()) {
+						worklist.add(v);
+						v.setListed(true);
+					}
 				}
 			});
 		}
