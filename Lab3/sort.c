@@ -48,6 +48,26 @@ void merge(void* base, size_t n, size_t s, int left_size) {
 	//printf("\n***********************\n");
 }
 
+struct Params {
+		void* base;
+		size_t n;
+		size_t s;
+		int		(*cmp)(const void*, const void*);
+		int nbr_splits;
+};
+
+void par_sort_rec(
+	void*		base,	// Array to sort.
+	size_t		n,	// Number of elements in base.
+	size_t		s,	// Size of each element.
+	int		(*cmp)(const void*, const void*),
+	int nbr_splits);
+
+void* pack_func(void* s) {
+	struct Params* p = (struct Params*)s;
+	par_sort_rec(p->base, p->n, p->s, p->cmp, p->nbr_splits);
+}
+
 void par_sort_rec(
 	void*		base,	// Array to sort.
 	size_t		n,	// Number of elements in base.
@@ -58,11 +78,19 @@ void par_sort_rec(
 	if(nbr_splits >= MAX_SPLITS) {
 		qsort(base, n, s, cmp);
 	} else {
-		int left_size = n / 4;
+		int left_size = n / 2;
 
-		//Create two threads
-		par_sort_rec(base, left_size, s, cmp, nbr_splits+1);
-		par_sort_rec(base + s*left_size, n - left_size, s, cmp, nbr_splits+1);
+		pthread_t left_thread;
+		struct Params left_params = {base, left_size, s, cmp, nbr_splits+1};
+		pthread_create(&left_thread, NULL, pack_func, &left_params);
+
+		pthread_t right_thread;
+		struct Params right_params = {base + s*left_size, n - left_size, s, cmp, nbr_splits+1};
+		pthread_create(&right_thread, NULL, pack_func, &right_params);
+
+		pthread_join(left_thread, NULL);
+		pthread_join(right_thread, NULL);
+
 		//wait for join both threads
 		merge(base, n, s, left_size);
 	}
@@ -106,7 +134,7 @@ int main(int ac, char** av)
 	start = sec();
 
 	par_sort(b, n, sizeof b[0], cmp);
-	//qsort(a, n, sizeof a[0], cmp);
+	qsort(a, n, sizeof a[0], cmp);
 
 	end = sec();
 
@@ -116,7 +144,7 @@ int main(int ac, char** av)
 	}
 	printf("\n****************\n");
 */
-	/*int ok = 1;
+	int ok = 1;
 	for(i = 0; i < n; i++) {
 		if(a[i] != b[i]) {
 			ok = 0;
@@ -129,7 +157,7 @@ int main(int ac, char** av)
 			printf("%f --- %f \n", a[i], b[i]);
 		}
 	}
-	*/
+
 
 	free(a);
 	free(b);
