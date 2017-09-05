@@ -12,3 +12,5 @@ jdk:
 script: 
   - cd Lab1
   - make
+  - cd ../Lab3
+  - make

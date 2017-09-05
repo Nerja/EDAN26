@@ -8,44 +8,34 @@
 #include <sys/time.h>
 #include <unistd.h>
 #include <string.h>
+#include <time.h>
+
 #define MAX_SPLITS 2
 
+//https://stackoverflow.com/questions/20483534/clock-gettime-still-not-monotonic-alternatives
 static double sec(void)
 {
 	struct timespec ts;
-	timespec_get(&ts, TIME_UTC);
-	return ts.tv_nsec;
+	clock_gettime(CLOCK_MONOTONIC, &ts);
+	return ts.tv_sec + (ts.tv_nsec / 1000000000.0);
 }
 
 void merge(void* base, size_t n, size_t s, int left_size) {
-	//printf("******BEFORE*******\n");
-	//printf("left_size: %d\n", left_size);
-	//for(int i = 0; i < n; i++)
-	//	printf("%f ", ((double*)base)[i]);
-	//printf("\n");
 	double* new_base = malloc(n * s);
 	int left_index = 0, right_index = 0;
 	while(left_index < left_size && right_index < (n - left_size)) {
 		double left_value = ((double*)base)[left_index];
 		double right_value = ((double*)base)[right_index + left_size];
-		if(left_value > right_value) {
-			new_base[left_index + right_index] = right_value;
-			right_index++;
-		} else {
-			new_base[left_index + right_index] = left_value;
-			left_index++;
-		}
+		if(left_value > right_value)
+			new_base[left_index + right_index++] = right_value;
+		else
+			new_base[left_index++ + right_index] = left_value;
 	}
-	if(left_index < left_size) {
-		//risky
+	if(left_index < left_size)
 		memmove(new_base + (left_index + right_index), base + s*left_index, s*(left_size - left_index));
-	} else {
+	else
 		memmove(new_base + left_size + right_index, base + s*(left_size + right_index), s*(n - (left_size + right_index)));
-	}
 	memmove(base, (void*)new_base, n*s);
-	//for(int i = 0; i < n; i++)
-	//	printf("%f ", new_base[i]);
-	//printf("\n***********************\n");
 }
 
 struct Params {
@@ -91,7 +81,6 @@ void par_sort_rec(
 		pthread_join(left_thread, NULL);
 		pthread_join(right_thread, NULL);
 
-		//wait for join both threads
 		merge(base, n, s, left_size);
 	}
 }
@@ -116,7 +105,7 @@ int main(int ac, char** av)
 	int		i;
 	double*		a;
 	double*		b;
-	double		start, end;
+	double		par_start, par_end, seq_start, seq_end;
 
 	if (ac > 1)
 		sscanf(av[1], "%d", &n);
@@ -131,32 +120,20 @@ int main(int ac, char** av)
 		b[i] = x;
 	}
 
-	start = sec();
-
+	par_start = sec();
 	par_sort(b, n, sizeof b[0], cmp);
+	par_end = sec();
+
+	seq_start = sec();
 	qsort(a, n, sizeof a[0], cmp);
+	seq_end = sec();
 
-	end = sec();
 
-	printf("%1.2f s\n", (end - start) / 1000000000);
-/*	for(i = 0; i < n; i++) {
-		printf("%f\n", b[i]);
-	}
-	printf("\n****************\n");
-*/
-	int ok = 1;
-	for(i = 0; i < n; i++) {
-		if(a[i] != b[i]) {
-			ok = 0;
-			break;
-		}
-	}
+	for(i = 0; i < n; i++)
+		assert(a[i] == b[i]);
 
-	if(ok == 0) {
-		for(i = 0; i < n; i++) {
-			printf("%f --- %f \n", a[i], b[i]);
-		}
-	}
+	printf("Sequential version: \t%lfs\n", (seq_end - seq_start));
+	printf("Parallel version: \t%lfs\n", (par_end - par_start));
 
 
 	free(a);
