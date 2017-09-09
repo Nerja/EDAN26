@@ -92,7 +92,7 @@ class Vertex {
 		for (i = 0; i < def.size(); ++i)
 			if (def.get(i))
 				System.out.print("" + i + " ");
-		System.out.println("}\n");
+		System.out.println("}");
 
 		System.out.print("in[" + index + "] = { ");
 		for (i = 0; i < in.size(); ++i)
