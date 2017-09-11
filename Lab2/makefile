@@ -21,9 +21,9 @@ all:
 
 measuretime:
 	scalac -deprecation -optimise -d classes dataflow.scala
-	scala -J-Xmx12g -classpath classes Driver 20000 2000 4 100 0
-	cd ../Lab1/ && javac Dataflow.java && java -Xmx12048M Dataflow 20000 2000 4 100 1 0
-	cd ../Lab1/ && javac FastDataflow.java && java -Xmx12048M FastDataflow 20000 2000 4 100 1 0
+	scala -J-Xmx12g -classpath classes Driver 200000 20000 4 100 0
+	cd ../Lab1/ && javac Dataflow.java && java -Xmx12048M Dataflow 200000 20000 4 100 1 0
+	cd ../Lab1/ && javac FastDataflow.java && java -Xmx12048M FastDataflow 200000 20000 4 100 4 0
 
 run:
 	scala -classpath classes Driver $(NSYM) $(NVERTEX) $(MAXSUCC) $(NACTIVE) $(PRINT)

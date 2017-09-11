@@ -10,6 +10,7 @@ case class Go();
 case class ChangeAdded();
 case class ChangeProcessed();
 case class Change(in: BitSet);
+case class Propagate();
 
 class Random(seed: Int) {
         var w = seed + 1;
@@ -98,6 +99,11 @@ class Vertex(val index: Int, s: Int, val controller: Controller) extends Actor {
 
       case Change(v_in: BitSet) => {
         out.or(v_in);
+        this ! new Propagate();
+        act();
+      } 
+
+      case Propagate() => {
         val oldIn = in;
         in = new BitSet();
         in.or(out);
@@ -110,7 +116,7 @@ class Vertex(val index: Int, s: Int, val controller: Controller) extends Actor {
             }
         controller ! new ChangeProcessed();
         act();
-      } 
+      }
 
       case Stop()  => { }
     }
