@@ -15,6 +15,7 @@ all:
 	scala -classpath classes Driver $(NSYM) $(NVERTEX) $(MAXSUCC) $(NACTIVE) $(PRINT)
 
 compare:
+    ./download_actors.sh
 	scala -classpath classes Driver $(NSYM) $(NVERTEX) $(MAXSUCC) $(NACTIVE) $(PRINT) > lab2scala.out
 	tail -n +4 lab2scala.out > lab2scala; mv lab2scala lab2scala.out
 	cd ../Lab1/ && javac Dataflow.java && java -Xmx2048M Dataflow $(NSYM) $(NVERTEX) $(MAXSUCC) $(NACTIVE) 1 $(PRINT) > ../Lab2Niklas/lab1java.out
