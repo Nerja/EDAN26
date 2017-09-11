@@ -16,3 +16,7 @@ script:
   - make
   - cd ../Lab2
   - make
+  - cd ../Lab2Niklas
+  - make compare
+  - cd ../Lab1Niklas
+  - make
