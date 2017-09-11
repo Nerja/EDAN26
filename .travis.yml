@@ -20,3 +20,5 @@ script:
   - make compare
   - cd ../Lab1Niklas
   - make
+  - cd ../Lab4
+  - make
