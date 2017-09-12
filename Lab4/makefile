@@ -9,7 +9,7 @@ OBJS		= main.o list.o error.o random.o set.o dataflow.o
 
 OUT		= live
 
-LDFLAGS		= -lpthread -static
+LDFLAGS		= -lpthread
 
 S=10000
 V=1000
@@ -20,7 +20,7 @@ P=1
 
 all: $(OBJS)	
 	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $(OUT)
-	#valgrind --tool=helgrind ./$(OUT) $(S) $(V) $(U) $(A) $(T) $(P) $(L)
+	valgrind --tool=helgrind ./$(OUT) $(S) $(V) $(U) $(A) $(T) 0 $(L)
 	./$(OUT) $(S) $(V) $(U) $(A) $(T) $(P) > out_c
 	tail -n +12 out_c > out_c_tmp; mv out_c_tmp out_c
 	cd ../Lab1/ && javac Dataflow.java && java -Xmx2048M Dataflow $(S) $(V) $(U) $(A) 1 1 > ../Lab4/out_java

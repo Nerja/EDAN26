@@ -12,6 +12,8 @@
 typedef struct vertex_t	vertex_t;
 typedef struct task_t	task_t;
 
+#define NBR_WORKERS (1)
+
 /* cfg_t: a control flow graph. */
 struct cfg_t {
 	size_t			nvertex;	/* number of vertices		*/
@@ -114,7 +116,7 @@ void setbit(cfg_t* cfg, size_t v, set_type_t type, size_t index)
 	set(cfg->vertex[v].set[type], index);
 }
 
-void liveness_par(void* x) {
+void* liveness_par(void* x) {
 	list_t*		worklist = (list_t*)x;
 	vertex_t*	u;
 	vertex_t*	v;
@@ -152,6 +154,7 @@ void liveness_par(void* x) {
 			} while (p != h);
 		}
 	}
+	return NULL;
 }
 
 void liveness(cfg_t* cfg)
@@ -159,6 +162,7 @@ void liveness(cfg_t* cfg)
 	vertex_t*	u;
 	size_t		i;
 	list_t*		worklist;
+	pthread_t   workers[NBR_WORKERS];
 	printf("Running fast version...\n");
 	worklist = NULL;
 
@@ -169,7 +173,13 @@ void liveness(cfg_t* cfg)
 		u->listed = true;
 	}
 
-	liveness_par(worklist);
+	// Start all workers
+	for(i = 0; i < NBR_WORKERS; ++i)
+		pthread_create(&workers[i], NULL, liveness_par, worklist);
+
+	// Join all workers
+	for(i = 0; i < NBR_WORKERS; ++i)
+		pthread_join(workers[i], NULL);
 }
 
 void print_sets(cfg_t* cfg, FILE *fp)
