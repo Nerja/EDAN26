@@ -2,6 +2,8 @@ language:
   - java
   - c
 
+sudo: required
+
 compiler:
   - clang
   - gcc
@@ -13,6 +15,11 @@ addons:
 jdk:
   - oraclejdk8
 
+
+before_install:
+  - sudo apt-get install -qq valgrind
+
+
 # command to run tests
 script: 
   - cd Lab1
@@ -21,8 +28,6 @@ script:
   - make
   - cd ../Lab2
   - make
-  - cd ../Lab2Niklas
-  - make compare
   - cd ../Lab1Niklas
   - make
   - cd ../Lab4
