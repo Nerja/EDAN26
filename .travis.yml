@@ -1,5 +1,10 @@
 language: 
   - java
+  - c
+
+compiler:
+  - clang
+  - gcc
 
 addons:
   apt:

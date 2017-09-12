@@ -27,6 +27,10 @@ all: $(OBJS)
 	tail -n +9 out_java > out_java_tmp; mv out_java_tmp out_java
 	cmp out_c out_java
 
+measuretime:
+	cd ../Lab2 && make measuretime
+	$(CC) $(CFLAGS) $(OBJS) $(LDFLAGS) -o $(OUT)
+	./live 200000 20000 4 100 4 0
 
 clean:
 	rm -f $(OUT) $(OBJS) cfg.dot

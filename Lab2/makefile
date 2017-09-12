@@ -21,6 +21,8 @@ all:
 	rm out_java	
 
 measuretime:
+	./download_actors.sh
+	@mkdir -p classes
 	scalac -deprecation -optimise -d classes dataflow.scala
 	scala -J-Xmx12g -classpath classes Driver 200000 20000 4 100 0
 	cd ../Lab1/ && javac Dataflow.java && java -Xmx12048M Dataflow 200000 20000 4 100 1 0

@@ -21,7 +21,11 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
-
 #scala
 classes/
 scala-2.10.6/
+
+#c
+*.out
+*.o
+live
