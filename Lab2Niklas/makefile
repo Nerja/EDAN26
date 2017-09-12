@@ -1,3 +1,4 @@
+SHELL=/bin/bash
 NSYM	= 10000
 NVERTEX	= 1000
 MAXSUCC	= 4
@@ -16,6 +17,7 @@ all:
 
 compare:
 	./download_actors.sh
+	@mkdir -p classes
 	scalac -deprecation -optimise -d classes dataflow.scala
 	scala -classpath classes Driver $(NSYM) $(NVERTEX) $(MAXSUCC) $(NACTIVE) $(PRINT) > lab2scala.out
 	tail -n +4 lab2scala.out > lab2scala; mv lab2scala lab2scala.out

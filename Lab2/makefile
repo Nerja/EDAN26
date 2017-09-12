@@ -1,3 +1,4 @@
+SHELL=/bin/bash
 NSYM	= 10000
 NVERTEX	= 1000
 MAXSUCC	= 4
