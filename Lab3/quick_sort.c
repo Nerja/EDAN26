@@ -13,7 +13,7 @@
 #define MAX_SPLITS 2
 
 //https://stackoverflow.com/questions/20483534/clock-gettime-still-not-monotonic-alternatives
-static double sec(void)
+double sec(void)
 {
 	struct timespec ts;
 	clock_gettime(CLOCK_MONOTONIC, &ts);
@@ -101,7 +101,7 @@ void par_sort(
 	par_sort_rec(base, n, s, cmp, 0);
 }
 
-static int cmp(const void* ap, const void* bp)
+int cmp(const void* ap, const void* bp)
 {
 	return *(double*)ap - *(double*)bp;
 }
@@ -136,7 +136,7 @@ int main(int ac, char** av)
 	seq_end = sec();
 
 
-	for(i = 0; i < n; i++);
+	for(i = 0; i < n; i++)
 		assert(a[i] == b[i]);
 
 	printf("Quicksort parallell\n");
