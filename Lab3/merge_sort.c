@@ -36,6 +36,7 @@ void merge(void* base, size_t n, size_t s, int left_size) {
 	else
 		memmove(new_base + left_size + right_index, base + s*(left_size + right_index), s*(n - (left_size + right_index)));
 	memmove(base, (void*)new_base, n*s);
+	free(new_base);
 }
 
 struct Params {
