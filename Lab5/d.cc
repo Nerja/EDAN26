@@ -3,6 +3,7 @@
 #include <thread>
 #include <mutex>
 #include <condition_variable>
+#include <atomic>
 
 //time
 #include <sys/times.h>
@@ -12,12 +13,28 @@
 
 //#include "timebase.h"
 
+class spin_lock {
+	std::atomic_flag flag = ATOMIC_FLAG_INIT;
+
+	public:
+
+		void lock()
+		{
+			while(flag.test_and_set(std::memory_order_acquire));
+		}
+
+		void unlock()
+		{
+			flag.clear(std::memory_order_release);
+		}
+
+};
+
 class worklist_t {
 	int*			a;
 	size_t			n;
 	size_t			total;	// sum a[0]..a[n-1]
-	std::mutex mtx;
-	std::condition_variable data_available;
+	spin_lock		mtx;
 
 public:
 	worklist_t(size_t max)
@@ -51,7 +68,6 @@ public:
 		a[num] += 1;
 		total += 1;
 		mtx.unlock();
-		data_available.notify_all();
 	}
 
 	int get()
@@ -59,27 +75,12 @@ public:
 		int				i;
 		int				num;
 
-		/* hint: if your class has a mutex m
-		 * and a condition_variable c, you
-		 * can lock it and wait for a number
-		 * (i.e. total > 0) as follows.
-		 *
-		 */
-
-		std::unique_lock<std::mutex>	u(mtx);
-
-		/* the lambda is a predicate that
-		 * returns false when waiting should
-		 * continue.
-		 *
-		 * this mechanism will automatically
-		 * unlock the mutex m when you return
-		 * from this function. this happens when
-		 * the destructor of u is called.
-		 *
-		 */
-
-		data_available.wait(u, [this]() { return total > 0; } );
+		mtx.lock();
+		while(total < 1) {
+			mtx.unlock();
+			std::this_thread::yield();
+			mtx.lock();
+		}
 
 		for (i = 1; i <= n; i += 1)
 			if (a[i] > 0)
@@ -93,16 +94,16 @@ public:
 			abort();
 		} else
 			i = 0;
-
+		mtx.unlock();
 		return i;
 	}
 };
 
 static worklist_t*		worklist;
-static unsigned long long	sum;
+static std::atomic<unsigned long long> sum;
 static int			iterations;
 static int			max;
-std::mutex 			sum_mtx;
+//std::mutex 			sum_mtx;
 
 static void produce()
 {
@@ -128,9 +129,9 @@ static void consume()
 
 	while ((n = worklist->get()) > 0) {
 		f = factorial(n);
-		sum_mtx.lock();
-		sum += f;
-		sum_mtx.unlock();
+		//sum_mtx.lock();
+		sum.fetch_add(f, std::memory_order_relaxed);
+		//sum_mtx.unlock();
 	}
 }
 
@@ -170,7 +171,7 @@ int main(void)
 
 	nbr_measurements = 30;
 
-	printf("mutex/condvar and mutex for sum\n");
+	printf("Spin lock and atomic add for sum\n");
 
 	//init_timebase();
 
@@ -190,12 +191,12 @@ int main(void)
 		work();
 		end = sec();
 		//end = timebase_sec();
-
 		if (sum != correct) {
 			fprintf(stderr, "wrong output!\n");
 			abort();
 		}
 
+		//printf("T = %1.2lf s\n", end - begin);
 		total_time += (end - begin);
 	}
 	printf("dT = %1.2lf s\n", total_time / nbr_measurements);

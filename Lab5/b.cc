@@ -3,6 +3,7 @@
 #include <thread>
 #include <mutex>
 #include <condition_variable>
+#include <atomic>
 
 //time
 #include <sys/times.h>
@@ -99,10 +100,10 @@ public:
 };
 
 static worklist_t*		worklist;
-static unsigned long long	sum;
+static std::atomic<unsigned long long> sum;
 static int			iterations;
 static int			max;
-std::mutex 			sum_mtx;
+//std::mutex 			sum_mtx;
 
 static void produce()
 {
@@ -128,9 +129,9 @@ static void consume()
 
 	while ((n = worklist->get()) > 0) {
 		f = factorial(n);
-		sum_mtx.lock();
+		//sum_mtx.lock();
 		sum += f;
-		sum_mtx.unlock();
+		//sum_mtx.unlock();
 	}
 }
 
@@ -170,7 +171,7 @@ int main(void)
 
 	nbr_measurements = 30;
 
-	printf("mutex/condvar and mutex for sum\n");
+	printf("mutex/condvar and atomic for sum\n");
 
 	//init_timebase();
 
@@ -196,6 +197,7 @@ int main(void)
 			abort();
 		}
 
+		//printf("T = %1.2lf s\n", end - begin);
 		total_time += (end - begin);
 	}
 	printf("dT = %1.2lf s\n", total_time / nbr_measurements);
