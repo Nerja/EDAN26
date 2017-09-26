@@ -103,6 +103,7 @@ static worklist_t*		worklist;
 static std::atomic<unsigned long long> sum;
 static int			iterations;
 static int			max;
+volatile int VAR;
 //std::mutex 			sum_mtx;
 
 static void produce()
@@ -130,7 +131,9 @@ static void consume()
 	while ((n = worklist->get()) > 0) {
 		f = factorial(n);
 		//sum_mtx.lock();
+		VAR ^= 1234;
 		sum += f;
+		VAR ^= 5678;
 		//sum_mtx.unlock();
 	}
 }
