@@ -32,3 +32,5 @@ script:
   - make
   - cd ../Lab4
   - make
+  - cd ../Lab5
+  - make
