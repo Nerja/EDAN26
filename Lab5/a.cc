@@ -10,7 +10,7 @@
 #include <time.h>
 
 
-//#include "timebase.h"
+#include "timebase.h"
 
 class worklist_t {
 	int*			a;
@@ -168,11 +168,11 @@ int main(void)
 	unsigned long long	correct;
 	int			i;
 
-	nbr_measurements = 30;
+	nbr_measurements = 10;
 
 	printf("mutex/condvar and mutex for sum\n");
 
-	//init_timebase();
+	init_timebase();
 
 	iterations	= 100000;
 	max		= 12;
@@ -185,11 +185,11 @@ int main(void)
 	worklist = new worklist_t(max);
 
 	for (i = 1; i <= nbr_measurements; i += 1) {
-		//begin = timebase_sec();
-		begin = sec();
+		begin = timebase_sec();
+		//begin = sec();
 		work();
-		end = sec();
-		//end = timebase_sec();
+		//end = sec();
+		end = timebase_sec();
 
 		if (sum != correct) {
 			fprintf(stderr, "wrong output!\n");
