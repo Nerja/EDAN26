@@ -11,7 +11,7 @@
 */
 
 #include "f2c.h"
-#include <stdio>
+#include <stdio.h>
 
 /* Common Block Declarations */
 
