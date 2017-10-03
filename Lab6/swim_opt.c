@@ -15,12 +15,12 @@
 /* Common Block Declarations */
 
 struct {
-    doublereal u[1782225]	/* was [1335][1335] */, v[1782225]	/* 
+    doublereal u[1782225]	/* was [1335][1335] */, v[1782225]	/*
 	    was [1335][1335] */, p[1782225]	/* was [1335][1335] */, unew[
 	    1782225]	/* was [1335][1335] */, vnew[1782225]	/* was [1335][
-	    1335] */, pnew[1782225]	/* was [1335][1335] */, uold[1782225]	
+	    1335] */, pnew[1782225]	/* was [1335][1335] */, uold[1782225]
 	    /* was [1335][1335] */, vold[1782225]	/* was [1335][1335] */
-	    , pold[1782225]	/* was [1335][1335] */, cu[1782225]	/* 
+	    , pold[1782225]	/* was [1335][1335] */, cu[1782225]	/*
 	    was [1335][1335] */, cv[1782225]	/* was [1335][1335] */, z__[
 	    1782225]	/* was [1335][1335] */, h__[1782225]	/* was [1335][
 	    1335] */, psi[1782225]	/* was [1335][1335] */;
@@ -66,7 +66,7 @@ static integer c__3 = 3;
     olist o__1;
 
     /* Builtin functions */
-    integer s_wsle(cilist *), do_lio(integer *, integer *, char *, ftnlen), 
+    integer s_wsle(cilist *), do_lio(integer *, integer *, char *, ftnlen),
 	    e_wsle(void), f_open(olist *), s_wsfe(cilist *), do_fio(integer *,
 	     char *, ftnlen), e_wsfe(void);
     /* Subroutine */ int s_stop(char *, ftnlen);
@@ -209,11 +209,11 @@ L90:
     for (icheck = 1; icheck <= i__1; ++icheck) {
 	i__2 = mnmin;
 	for (jcheck = 1; jcheck <= i__2; ++jcheck) {
-	    pcheck += (d__1 = _BLNK__1.pnew[icheck + jcheck * 1335 - 1336], 
+	    pcheck += (d__1 = _BLNK__1.pnew[icheck + jcheck * 1335 - 1336],
 		    abs(d__1));
-	    ucheck += (d__1 = _BLNK__1.unew[icheck + jcheck * 1335 - 1336], 
+	    ucheck += (d__1 = _BLNK__1.unew[icheck + jcheck * 1335 - 1336],
 		    abs(d__1));
-	    vcheck += (d__1 = _BLNK__1.vnew[icheck + jcheck * 1335 - 1336], 
+	    vcheck += (d__1 = _BLNK__1.vnew[icheck + jcheck * 1335 - 1336],
 		    abs(d__1));
 /* L4500: */
 	}
@@ -250,7 +250,7 @@ L370:
     integer i__1, i__2;
 
     /* Builtin functions */
-    integer s_rsle(cilist *), do_lio(integer *, integer *, char *, ftnlen), 
+    integer s_rsle(cilist *), do_lio(integer *, integer *, char *, ftnlen),
 	    e_rsle(void);
     double atan(doublereal), sin(doublereal), cos(doublereal);
 
@@ -326,7 +326,7 @@ L370:
     cons_1.tpi = cons_1.pi + cons_1.pi;
     cons_1.di = cons_1.tpi / cons_1.m;
     cons_1.dj = cons_1.tpi / cons_1.n;
-    cons_1.pcf = cons_1.pi * cons_1.pi * cons_1.a * cons_1.a / (cons_1.el * 
+    cons_1.pcf = cons_1.pi * cons_1.pi * cons_1.a * cons_1.a / (cons_1.el *
 	    cons_1.el);
 
 /*     INITIAL VALUES OF THE STREAM FUNCTION AND P */
@@ -335,9 +335,9 @@ L370:
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.mp1;
 	for (i__ = 1; i__ <= i__2; ++i__) {
-	    _BLNK__1.psi[i__ + j * 1335 - 1336] = cons_1.a * sin((i__ - .5) * 
+	    _BLNK__1.psi[i__ + j * 1335 - 1336] = cons_1.a * sin((i__ - .5) *
 		    cons_1.di) * sin((j - .5) * cons_1.dj);
-	    _BLNK__1.p[i__ + j * 1335 - 1336] = cons_1.pcf * (cos((i__ - 1) * 
+	    _BLNK__1.p[i__ + j * 1335 - 1336] = cons_1.pcf * (cos((i__ - 1) *
 		    2. * cons_1.di) + cos((j - 1) * 2. * cons_1.dj)) + 5e4;
 /* L50: */
 	}
@@ -350,10 +350,10 @@ L370:
 	i__1 = cons_1.m;
 	for (i__ = 1; i__ <= i__1; ++i__) {
 	    _BLNK__1.u[i__ + 1 + j * 1335 - 1336] = -(_BLNK__1.psi[i__ + 1 + (
-		    j + 1) * 1335 - 1336] - _BLNK__1.psi[i__ + 1 + j * 1335 - 
+		    j + 1) * 1335 - 1336] - _BLNK__1.psi[i__ + 1 + j * 1335 -
 		    1336]) / cons_1.dy;
-	    _BLNK__1.v[i__ + (j + 1) * 1335 - 1336] = (_BLNK__1.psi[i__ + 1 + 
-		    (j + 1) * 1335 - 1336] - _BLNK__1.psi[i__ + (j + 1) * 
+	    _BLNK__1.v[i__ + (j + 1) * 1335 - 1336] = (_BLNK__1.psi[i__ + 1 +
+		    (j + 1) * 1335 - 1336] - _BLNK__1.psi[i__ + (j + 1) *
 		    1335 - 1336]) / cons_1.dx;
 /* L60: */
 	}
@@ -363,9 +363,9 @@ L370:
 
     i__1 = cons_1.n;
     for (j = 1; j <= i__1; ++j) {
-	_BLNK__1.u[j * 1335 - 1335] = _BLNK__1.u[cons_1.m + 1 + j * 1335 - 
+	_BLNK__1.u[j * 1335 - 1335] = _BLNK__1.u[cons_1.m + 1 + j * 1335 -
 		1336];
-	_BLNK__1.v[cons_1.m + 1 + (j + 1) * 1335 - 1336] = _BLNK__1.v[(j + 1) 
+	_BLNK__1.v[cons_1.m + 1 + (j + 1) * 1335 - 1336] = _BLNK__1.v[(j + 1)
 		* 1335 - 1335];
 /* L70: */
     }
@@ -381,11 +381,11 @@ L370:
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.mp1;
 	for (i__ = 1; i__ <= i__2; ++i__) {
-	    _BLNK__1.uold[i__ + j * 1335 - 1336] = _BLNK__1.u[i__ + j * 1335 
+	    _BLNK__1.uold[i__ + j * 1335 - 1336] = _BLNK__1.u[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.vold[i__ + j * 1335 - 1336] = _BLNK__1.v[i__ + j * 1335 
+	    _BLNK__1.vold[i__ + j * 1335 - 1336] = _BLNK__1.v[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.pold[i__ + j * 1335 - 1336] = _BLNK__1.p[i__ + j * 1335 
+	    _BLNK__1.pold[i__ + j * 1335 - 1336] = _BLNK__1.p[i__ + j * 1335
 		    - 1336];
 /* L86: */
 	}
@@ -417,25 +417,25 @@ L370:
 	i__2 = cons_1.m;
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    _BLNK__1.cu[i__ + 1 + j * 1335 - 1336] = (_BLNK__1.p[i__ + 1 + j *
-		     1335 - 1336] + _BLNK__1.p[i__ + j * 1335 - 1336]) * .5 * 
+		     1335 - 1336] + _BLNK__1.p[i__ + j * 1335 - 1336]) * .5 *
 		    _BLNK__1.u[i__ + 1 + j * 1335 - 1336];
-	    _BLNK__1.cv[i__ + (j + 1) * 1335 - 1336] = (_BLNK__1.p[i__ + (j + 
-		    1) * 1335 - 1336] + _BLNK__1.p[i__ + j * 1335 - 1336]) * 
+	    _BLNK__1.cv[i__ + (j + 1) * 1335 - 1336] = (_BLNK__1.p[i__ + (j +
+		    1) * 1335 - 1336] + _BLNK__1.p[i__ + j * 1335 - 1336]) *
 		    .5 * _BLNK__1.v[i__ + (j + 1) * 1335 - 1336];
 	    _BLNK__1.z__[i__ + 1 + (j + 1) * 1335 - 1336] = (fsdx * (
 		    _BLNK__1.v[i__ + 1 + (j + 1) * 1335 - 1336] - _BLNK__1.v[
-		    i__ + (j + 1) * 1335 - 1336]) - fsdy * (_BLNK__1.u[i__ + 
-		    1 + (j + 1) * 1335 - 1336] - _BLNK__1.u[i__ + 1 + j * 
-		    1335 - 1336])) / (_BLNK__1.p[i__ + j * 1335 - 1336] + 
-		    _BLNK__1.p[i__ + 1 + j * 1335 - 1336] + _BLNK__1.p[i__ + 
-		    1 + (j + 1) * 1335 - 1336] + _BLNK__1.p[i__ + (j + 1) * 
+		    i__ + (j + 1) * 1335 - 1336]) - fsdy * (_BLNK__1.u[i__ +
+		    1 + (j + 1) * 1335 - 1336] - _BLNK__1.u[i__ + 1 + j *
+		    1335 - 1336])) / (_BLNK__1.p[i__ + j * 1335 - 1336] +
+		    _BLNK__1.p[i__ + 1 + j * 1335 - 1336] + _BLNK__1.p[i__ +
+		    1 + (j + 1) * 1335 - 1336] + _BLNK__1.p[i__ + (j + 1) *
 		    1335 - 1336]);
-	    _BLNK__1.h__[i__ + j * 1335 - 1336] = _BLNK__1.p[i__ + j * 1335 - 
-		    1336] + (_BLNK__1.u[i__ + 1 + j * 1335 - 1336] * 
-		    _BLNK__1.u[i__ + 1 + j * 1335 - 1336] + _BLNK__1.u[i__ + 
-		    j * 1335 - 1336] * _BLNK__1.u[i__ + j * 1335 - 1336] + 
-		    _BLNK__1.v[i__ + (j + 1) * 1335 - 1336] * _BLNK__1.v[i__ 
-		    + (j + 1) * 1335 - 1336] + _BLNK__1.v[i__ + j * 1335 - 
+	    _BLNK__1.h__[i__ + j * 1335 - 1336] = _BLNK__1.p[i__ + j * 1335 -
+		    1336] + (_BLNK__1.u[i__ + 1 + j * 1335 - 1336] *
+		    _BLNK__1.u[i__ + 1 + j * 1335 - 1336] + _BLNK__1.u[i__ +
+		    j * 1335 - 1336] * _BLNK__1.u[i__ + j * 1335 - 1336] +
+		    _BLNK__1.v[i__ + (j + 1) * 1335 - 1336] * _BLNK__1.v[i__
+		    + (j + 1) * 1335 - 1336] + _BLNK__1.v[i__ + j * 1335 -
 		    1336] * _BLNK__1.v[i__ + j * 1335 - 1336]) * .25;
 /* L100: */
 	}
@@ -445,13 +445,13 @@ L370:
 
     i__2 = cons_1.n;
     for (j = 1; j <= i__2; ++j) {
-	_BLNK__1.cu[j * 1335 - 1335] = _BLNK__1.cu[cons_1.m + 1 + j * 1335 - 
+	_BLNK__1.cu[j * 1335 - 1335] = _BLNK__1.cu[cons_1.m + 1 + j * 1335 -
 		1336];
-	_BLNK__1.cv[cons_1.m + 1 + (j + 1) * 1335 - 1336] = _BLNK__1.cv[(j + 
+	_BLNK__1.cv[cons_1.m + 1 + (j + 1) * 1335 - 1336] = _BLNK__1.cv[(j +
 		1) * 1335 - 1335];
-	_BLNK__1.z__[(j + 1) * 1335 - 1335] = _BLNK__1.z__[cons_1.m + 1 + (j 
+	_BLNK__1.z__[(j + 1) * 1335 - 1335] = _BLNK__1.z__[cons_1.m + 1 + (j
 		+ 1) * 1335 - 1336];
-	_BLNK__1.h__[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.h__[j * 1335 
+	_BLNK__1.h__[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.h__[j * 1335
 		- 1335];
 /* L110: */
     }
@@ -461,15 +461,15 @@ L370:
 		;
 	_BLNK__1.cv[i__ - 1] = _BLNK__1.cv[i__ + (cons_1.n + 1) * 1335 - 1336]
 		;
-	_BLNK__1.z__[i__] = _BLNK__1.z__[i__ + 1 + (cons_1.n + 1) * 1335 - 
+	_BLNK__1.z__[i__] = _BLNK__1.z__[i__ + 1 + (cons_1.n + 1) * 1335 -
 		1336];
-	_BLNK__1.h__[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.h__[i__ - 
+	_BLNK__1.h__[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.h__[i__ -
 		1];
 /* L115: */
     }
     _BLNK__1.cu[(cons_1.n + 1) * 1335 - 1335] = _BLNK__1.cu[cons_1.m];
     _BLNK__1.cv[cons_1.m] = _BLNK__1.cv[(cons_1.n + 1) * 1335 - 1335];
-    _BLNK__1.z__[0] = _BLNK__1.z__[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 
+    _BLNK__1.z__[0] = _BLNK__1.z__[cons_1.m + 1 + (cons_1.n + 1) * 1335 -
 	    1336];
     _BLNK__1.h__[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.h__[
 	    0];
@@ -499,24 +499,24 @@ L370:
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.m;
 	for (i__ = 1; i__ <= i__2; ++i__) {
-	    _BLNK__1.unew[i__ + 1 + j * 1335 - 1336] = _BLNK__1.uold[i__ + 1 
-		    + j * 1335 - 1336] + tdts8 * (_BLNK__1.z__[i__ + 1 + (j + 
-		    1) * 1335 - 1336] + _BLNK__1.z__[i__ + 1 + j * 1335 - 
-		    1336]) * (_BLNK__1.cv[i__ + 1 + (j + 1) * 1335 - 1336] + 
+	    _BLNK__1.unew[i__ + 1 + j * 1335 - 1336] = _BLNK__1.uold[i__ + 1
+		    + j * 1335 - 1336] + tdts8 * (_BLNK__1.z__[i__ + 1 + (j +
+		    1) * 1335 - 1336] + _BLNK__1.z__[i__ + 1 + j * 1335 -
+		    1336]) * (_BLNK__1.cv[i__ + 1 + (j + 1) * 1335 - 1336] +
 		    _BLNK__1.cv[i__ + (j + 1) * 1335 - 1336] + _BLNK__1.cv[
-		    i__ + j * 1335 - 1336] + _BLNK__1.cv[i__ + 1 + j * 1335 - 
+		    i__ + j * 1335 - 1336] + _BLNK__1.cv[i__ + 1 + j * 1335 -
 		    1336]) - tdtsdx * (_BLNK__1.h__[i__ + 1 + j * 1335 - 1336]
 		     - _BLNK__1.h__[i__ + j * 1335 - 1336]);
 	    _BLNK__1.vnew[i__ + (j + 1) * 1335 - 1336] = _BLNK__1.vold[i__ + (
 		    j + 1) * 1335 - 1336] - tdts8 * (_BLNK__1.z__[i__ + 1 + (
-		    j + 1) * 1335 - 1336] + _BLNK__1.z__[i__ + (j + 1) * 1335 
-		    - 1336]) * (_BLNK__1.cu[i__ + 1 + (j + 1) * 1335 - 1336] 
+		    j + 1) * 1335 - 1336] + _BLNK__1.z__[i__ + (j + 1) * 1335
+		    - 1336]) * (_BLNK__1.cu[i__ + 1 + (j + 1) * 1335 - 1336]
 		    + _BLNK__1.cu[i__ + (j + 1) * 1335 - 1336] + _BLNK__1.cu[
-		    i__ + j * 1335 - 1336] + _BLNK__1.cu[i__ + 1 + j * 1335 - 
-		    1336]) - tdtsdy * (_BLNK__1.h__[i__ + (j + 1) * 1335 - 
+		    i__ + j * 1335 - 1336] + _BLNK__1.cu[i__ + 1 + j * 1335 -
+		    1336]) - tdtsdy * (_BLNK__1.h__[i__ + (j + 1) * 1335 -
 		    1336] - _BLNK__1.h__[i__ + j * 1335 - 1336]);
-	    _BLNK__1.pnew[i__ + j * 1335 - 1336] = _BLNK__1.pold[i__ + j * 
-		    1335 - 1336] - tdtsdx * (_BLNK__1.cu[i__ + 1 + j * 1335 - 
+	    _BLNK__1.pnew[i__ + j * 1335 - 1336] = _BLNK__1.pold[i__ + j *
+		    1335 - 1336] - tdtsdx * (_BLNK__1.cu[i__ + 1 + j * 1335 -
 		    1336] - _BLNK__1.cu[i__ + j * 1335 - 1336]) - tdtsdy * (
 		    _BLNK__1.cv[i__ + (j + 1) * 1335 - 1336] - _BLNK__1.cv[
 		    i__ + j * 1335 - 1336]);
@@ -528,11 +528,11 @@ L370:
 
     i__2 = cons_1.n;
     for (j = 1; j <= i__2; ++j) {
-	_BLNK__1.unew[j * 1335 - 1335] = _BLNK__1.unew[cons_1.m + 1 + j * 
+	_BLNK__1.unew[j * 1335 - 1335] = _BLNK__1.unew[cons_1.m + 1 + j *
 		1335 - 1336];
 	_BLNK__1.vnew[cons_1.m + 1 + (j + 1) * 1335 - 1336] = _BLNK__1.vnew[(
 		j + 1) * 1335 - 1335];
-	_BLNK__1.pnew[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.pnew[j * 
+	_BLNK__1.pnew[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.pnew[j *
 		1335 - 1335];
 /* L210: */
     }
@@ -540,15 +540,15 @@ L370:
     for (i__ = 1; i__ <= i__2; ++i__) {
 	_BLNK__1.unew[i__ + 1 + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.unew[
 		i__];
-	_BLNK__1.vnew[i__ - 1] = _BLNK__1.vnew[i__ + (cons_1.n + 1) * 1335 - 
+	_BLNK__1.vnew[i__ - 1] = _BLNK__1.vnew[i__ + (cons_1.n + 1) * 1335 -
 		1336];
-	_BLNK__1.pnew[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.pnew[i__ 
+	_BLNK__1.pnew[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.pnew[i__
 		- 1];
 /* L215: */
     }
     _BLNK__1.unew[(cons_1.n + 1) * 1335 - 1335] = _BLNK__1.unew[cons_1.m];
     _BLNK__1.vnew[cons_1.m] = _BLNK__1.vnew[(cons_1.n + 1) * 1335 - 1335];
-    _BLNK__1.pnew[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] = 
+    _BLNK__1.pnew[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] =
 	    _BLNK__1.pnew[0];
 
     return 0;
@@ -572,17 +572,17 @@ L370:
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.mp1;
 	for (i__ = 1; i__ <= i__2; ++i__) {
-	    _BLNK__1.uold[i__ + j * 1335 - 1336] = _BLNK__1.u[i__ + j * 1335 
+	    _BLNK__1.uold[i__ + j * 1335 - 1336] = _BLNK__1.u[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.vold[i__ + j * 1335 - 1336] = _BLNK__1.v[i__ + j * 1335 
+	    _BLNK__1.vold[i__ + j * 1335 - 1336] = _BLNK__1.v[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.pold[i__ + j * 1335 - 1336] = _BLNK__1.p[i__ + j * 1335 
+	    _BLNK__1.pold[i__ + j * 1335 - 1336] = _BLNK__1.p[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.u[i__ + j * 1335 - 1336] = _BLNK__1.unew[i__ + j * 1335 
+	    _BLNK__1.u[i__ + j * 1335 - 1336] = _BLNK__1.unew[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.v[i__ + j * 1335 - 1336] = _BLNK__1.vnew[i__ + j * 1335 
+	    _BLNK__1.v[i__ + j * 1335 - 1336] = _BLNK__1.vnew[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.p[i__ + j * 1335 - 1336] = _BLNK__1.pnew[i__ + j * 1335 
+	    _BLNK__1.p[i__ + j * 1335 - 1336] = _BLNK__1.pnew[i__ + j * 1335
 		    - 1336];
 /* L400: */
 	}
@@ -611,23 +611,23 @@ L370:
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.m;
 	for (i__ = 1; i__ <= i__2; ++i__) {
-	    _BLNK__1.uold[i__ + j * 1335 - 1336] = _BLNK__1.u[i__ + j * 1335 
-		    - 1336] + cons_1.alpha * (_BLNK__1.unew[i__ + j * 1335 - 
-		    1336] - _BLNK__1.u[i__ + j * 1335 - 1336] * 2.f + 
+	    _BLNK__1.uold[i__ + j * 1335 - 1336] = _BLNK__1.u[i__ + j * 1335
+		    - 1336] + cons_1.alpha * (_BLNK__1.unew[i__ + j * 1335 -
+		    1336] - _BLNK__1.u[i__ + j * 1335 - 1336] * 2.f +
 		    _BLNK__1.uold[i__ + j * 1335 - 1336]);
-	    _BLNK__1.vold[i__ + j * 1335 - 1336] = _BLNK__1.v[i__ + j * 1335 
-		    - 1336] + cons_1.alpha * (_BLNK__1.vnew[i__ + j * 1335 - 
-		    1336] - _BLNK__1.v[i__ + j * 1335 - 1336] * 2.f + 
+	    _BLNK__1.vold[i__ + j * 1335 - 1336] = _BLNK__1.v[i__ + j * 1335
+		    - 1336] + cons_1.alpha * (_BLNK__1.vnew[i__ + j * 1335 -
+		    1336] - _BLNK__1.v[i__ + j * 1335 - 1336] * 2.f +
 		    _BLNK__1.vold[i__ + j * 1335 - 1336]);
-	    _BLNK__1.pold[i__ + j * 1335 - 1336] = _BLNK__1.p[i__ + j * 1335 
-		    - 1336] + cons_1.alpha * (_BLNK__1.pnew[i__ + j * 1335 - 
-		    1336] - _BLNK__1.p[i__ + j * 1335 - 1336] * 2.f + 
+	    _BLNK__1.pold[i__ + j * 1335 - 1336] = _BLNK__1.p[i__ + j * 1335
+		    - 1336] + cons_1.alpha * (_BLNK__1.pnew[i__ + j * 1335 -
+		    1336] - _BLNK__1.p[i__ + j * 1335 - 1336] * 2.f +
 		    _BLNK__1.pold[i__ + j * 1335 - 1336]);
-	    _BLNK__1.u[i__ + j * 1335 - 1336] = _BLNK__1.unew[i__ + j * 1335 
+	    _BLNK__1.u[i__ + j * 1335 - 1336] = _BLNK__1.unew[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.v[i__ + j * 1335 - 1336] = _BLNK__1.vnew[i__ + j * 1335 
+	    _BLNK__1.v[i__ + j * 1335 - 1336] = _BLNK__1.vnew[i__ + j * 1335
 		    - 1336];
-	    _BLNK__1.p[i__ + j * 1335 - 1336] = _BLNK__1.pnew[i__ + j * 1335 
+	    _BLNK__1.p[i__ + j * 1335 - 1336] = _BLNK__1.pnew[i__ + j * 1335
 		    - 1336];
 /* L300: */
 	}
@@ -637,38 +637,38 @@ L370:
 
     i__2 = cons_1.n;
     for (j = 1; j <= i__2; ++j) {
-	_BLNK__1.uold[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.uold[j * 
+	_BLNK__1.uold[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.uold[j *
 		1335 - 1335];
-	_BLNK__1.vold[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.vold[j * 
+	_BLNK__1.vold[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.vold[j *
 		1335 - 1335];
-	_BLNK__1.pold[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.pold[j * 
+	_BLNK__1.pold[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.pold[j *
 		1335 - 1335];
-	_BLNK__1.u[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.u[j * 1335 - 
+	_BLNK__1.u[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.u[j * 1335 -
 		1335];
-	_BLNK__1.v[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.v[j * 1335 - 
+	_BLNK__1.v[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.v[j * 1335 -
 		1335];
-	_BLNK__1.p[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.p[j * 1335 - 
+	_BLNK__1.p[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.p[j * 1335 -
 		1335];
 /* L320: */
     }
     i__2 = cons_1.m;
     for (i__ = 1; i__ <= i__2; ++i__) {
-	_BLNK__1.uold[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.uold[i__ 
+	_BLNK__1.uold[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.uold[i__
 		- 1];
-	_BLNK__1.vold[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.vold[i__ 
+	_BLNK__1.vold[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.vold[i__
 		- 1];
-	_BLNK__1.pold[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.pold[i__ 
+	_BLNK__1.pold[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.pold[i__
 		- 1];
 	_BLNK__1.u[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.u[i__ - 1];
 	_BLNK__1.v[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.v[i__ - 1];
 	_BLNK__1.p[i__ + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.p[i__ - 1];
 /* L325: */
     }
-    _BLNK__1.uold[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] = 
+    _BLNK__1.uold[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] =
 	    _BLNK__1.uold[0];
-    _BLNK__1.vold[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] = 
+    _BLNK__1.vold[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] =
 	    _BLNK__1.vold[0];
-    _BLNK__1.pold[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] = 
+    _BLNK__1.pold[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] =
 	    _BLNK__1.pold[0];
     _BLNK__1.u[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.u[0];
     _BLNK__1.v[cons_1.m + 1 + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.v[0];
@@ -677,4 +677,10 @@ L370:
     return 0;
 } /* calc3_ */
 
-/* Main program alias */ int shalow_ () { MAIN__ (); return 0; }
+/* Main program alias */
+int shalow_ () {
+  printf("hello\n");
+  MAIN__ ();
+  printf("Goodbye\n");
+  return 0;
+}
