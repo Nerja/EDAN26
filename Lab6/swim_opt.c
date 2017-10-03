@@ -234,7 +234,6 @@ L90:
         abs(d__1));
 /* L4500: */
 	}
-	_BLNK__1.unew[icheck + icheck * 1335 - 1336] *= icheck % 100 / 100.f;
 /* L3500: */
     }
 
@@ -244,7 +243,9 @@ L90:
   for (jcheck = 1; jcheck <= i__2; ++jcheck) {
         vcheck += (d__1 = _BLNK__1.vnew[icheck + jcheck * 1335 - 1336],
           abs(d__1));
-    }}
+    }
+    _BLNK__1.unew[icheck + icheck * 1335 - 1336] *= icheck % 100 / 100.f;
+  }
 
 
     // *********************************************
