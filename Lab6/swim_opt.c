@@ -591,6 +591,7 @@ L370:
 
     cons_1.tdt += cons_1.tdt;
     i__1 = cons_1.np1;
+    #pragma omp parallel for
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.mp1;
 	for (i__ = 1; i__ <= i__2; ++i__) {
@@ -630,6 +631,7 @@ L370:
 
 /* SPEC removed CCMIC$ DO GLOBAL */
     i__1 = cons_1.n;
+    #pragma omp parallel for
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.m;
 	for (i__ = 1; i__ <= i__2; ++i__) {
