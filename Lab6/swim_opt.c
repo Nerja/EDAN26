@@ -224,6 +224,9 @@ L90:
     vcheck = 0.;
     i__1 = mnmin;
     #pragma omp parallel for
+    #pragma reduction(+:pcheck)
+    #pragma reduction(+:ucheck)
+    #pragma reduction(+:vcheck)
     for (icheck = 1; icheck <= i__1; ++icheck) {
 	i__2 = mnmin;
 	for (jcheck = 1; jcheck <= i__2; ++jcheck) {
