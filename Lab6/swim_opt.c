@@ -213,6 +213,7 @@ L90:
     e_wsfe();
     s_wsfe(&io___9);
     i__1 = mnmin;
+    #pragma omp parallel for
     for (i__ = 1; i__ <= i__1; i__ += 10) {
 	do_fio(&c__1, (char *)&_BLNK__1.unew[i__ + i__ * 1335 - 1336], (
 		ftnlen)sizeof(doublereal));
@@ -516,7 +517,6 @@ L370:
     tdtsdy = cons_1.tdt / cons_1.dy;
 /* SPEC removed CCMIC$ DO GLOBAL */
     i__1 = cons_1.n;
-    
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.m;
 	for (i__ = 1; i__ <= i__2; ++i__) {
