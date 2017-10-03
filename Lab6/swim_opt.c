@@ -433,7 +433,7 @@ L370:
 /* SPEC removed CCMIC$ DO GLOBAL */
 
     i__1 = cons_1.n;
-    #pragma omp parallel for
+    //#pragma omp parallel for
     //#pragma omp for schedule(static, i__1 / omp_get_num_procs())
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.m;
@@ -660,7 +660,7 @@ L370:
 /*     PERIODIC CONTINUATION */
 
     i__2 = cons_1.n;
-
+    //#pragma omp parallel for
     for (j = 1; j <= i__2; ++j) {
 	_BLNK__1.uold[cons_1.m + 1 + j * 1335 - 1336] = _BLNK__1.uold[j *
 		1335 - 1335];
