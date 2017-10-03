@@ -464,6 +464,7 @@ L370:
 /*     PERIODIC CONTINUATION */
 
     i__2 = cons_1.n;
+    #pragma omp parallel for
     for (j = 1; j <= i__2; ++j) {
 	_BLNK__1.cu[j * 1335 - 1335] = _BLNK__1.cu[cons_1.m + 1 + j * 1335 -
 		1336];
