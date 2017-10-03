@@ -477,6 +477,7 @@ L370:
 /* L110: */
     }
     i__2 = cons_1.m;
+    #pragma omp parallel for
     for (i__ = 1; i__ <= i__2; ++i__) {
 	_BLNK__1.cu[i__ + 1 + (cons_1.n + 1) * 1335 - 1336] = _BLNK__1.cu[i__]
 		;
