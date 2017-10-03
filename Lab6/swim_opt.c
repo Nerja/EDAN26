@@ -431,8 +431,8 @@ L370:
 /* SPEC removed CCMIC$ DO GLOBAL */
 
     i__1 = cons_1.n;
-    #pragma omp parallel
-    #pragma omp for schedule(static, i__1 / omp_get_num_procs())
+    #pragma omp parallel for
+    //#pragma omp for schedule(static, i__1 / omp_get_num_procs())
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.m;
 	for (i__ = 1; i__ <= i__2; ++i__) {
@@ -516,6 +516,7 @@ L370:
     tdtsdy = cons_1.tdt / cons_1.dy;
 /* SPEC removed CCMIC$ DO GLOBAL */
     i__1 = cons_1.n;
+    #pragma omp parallel for
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.m;
 	for (i__ = 1; i__ <= i__2; ++i__) {
