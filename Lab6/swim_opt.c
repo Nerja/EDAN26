@@ -12,6 +12,7 @@
 
 #include "f2c.h"
 #include <stdio.h>
+#include <omp.h>
 
 
 /* Common Block Declarations */
