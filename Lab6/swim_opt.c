@@ -173,17 +173,17 @@ L90:
     ++ncycle;
 
 
-    #pragma omp sections
+  /*  #pragma omp sections
     {
       #pragma omp section
-      {
+      {*/
         calc1_();
-      }
+      /*}
       #pragma omp section
-      {
+      {*/
         calc2_();
-      }
-    }
+      /*}
+    }*/
 
 /*     COMPUTE CAPITAL  U, CAPITAL V, Z AND H */
 
@@ -399,7 +399,7 @@ L370:
     i__1 = cons_1.np1;
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.mp1;
-  #pragma omp parallel for
+
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    _BLNK__1.uold[i__ + j * 1335 - 1336] = _BLNK__1.u[i__ + j * 1335
 		    - 1336];
