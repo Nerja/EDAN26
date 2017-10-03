@@ -48,6 +48,7 @@ static integer c__3 = 3;
 /* *** */
 /* Main program */ int MAIN__(void)
 {
+    printf("the ting goes skraaaaa\n");
     /* Format strings */
     static char fmt_390[] = "(\002 NUMBER OF POINTS IN THE X DIRECTION\002,i"
 	    "8/\002 NUMBER OF POINTS IN THE Y DIRECTION\002,i8/\002 GRID SPAC"
@@ -680,8 +681,6 @@ L370:
 
 /* Main program alias */
 int shalow_ () {
-  printf("hello\n");
   MAIN__ ();
-  printf("Goodbye\n");
   return 0;
 }
