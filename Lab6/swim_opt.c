@@ -223,39 +223,22 @@ L90:
     ucheck = 0.;
     vcheck = 0.;
     i__1 = mnmin;
-    // *********************************************
-
-
-    #pragma omp parallel for reduction(+:pcheck)
+    // ********************************************* F
+    #pragma omp parallel for reduction(+:pcheck), reduction(+:ucheck), reduction(+:vcheck)
     for (icheck = 1; icheck <= i__1; ++icheck) {
-  i__2 = mnmin;
-  for (jcheck = 1; jcheck <= i__2; ++jcheck) {
-    pcheck += (d__1 = _BLNK__1.pnew[icheck + jcheck * 1335 - 1336],
-      abs(d__1));
+	i__2 = mnmin;
+	for (jcheck = 1; jcheck <= i__2; ++jcheck) {
+	    pcheck += (d__1 = _BLNK__1.pnew[icheck + jcheck * 1335 - 1336],
+		    abs(d__1));
+	    ucheck += (d__1 = _BLNK__1.unew[icheck + jcheck * 1335 - 1336],
+		    abs(d__1));
+	    vcheck += (d__1 = _BLNK__1.vnew[icheck + jcheck * 1335 - 1336],
+		    abs(d__1));
+/* L4500: */
+	}
+	_BLNK__1.unew[icheck + icheck * 1335 - 1336] *= icheck % 100 / 100.f;
+/* L3500: */
     }
-  }
-
-    #pragma omp parallel for reduction(+:ucheck)
-    for (icheck = 1; icheck <= i__1; ++icheck) {
-  i__2 = mnmin;
-  for (jcheck = 1; jcheck <= i__2; ++jcheck) {
-    ucheck += (d__1 = _BLNK__1.unew[icheck + jcheck * 1335 - 1336],
-      abs(d__1));
-    }
-  }
-
-    #pragma omp parallel for reduction(+:vcheck)
-    for (icheck = 1; icheck <= i__1; ++icheck) {
-  i__2 = mnmin;
-  for (jcheck = 1; jcheck <= i__2; ++jcheck) {
-        vcheck += (d__1 = _BLNK__1.vnew[icheck + jcheck * 1335 - 1336],
-          abs(d__1));
-    }
-    _BLNK__1.unew[icheck + icheck * 1335 - 1336] *= icheck % 100 / 100.f;
-  }
-
-
-    // *********************************************
 /* *** */
 /* *** */
     s_wsfe(&io___16);
