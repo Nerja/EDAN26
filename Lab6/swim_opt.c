@@ -213,7 +213,6 @@ L90:
     e_wsfe();
     s_wsfe(&io___9);
     i__1 = mnmin;
-    #pragma omp parallel for
     for (i__ = 1; i__ <= i__1; i__ += 10) {
 	do_fio(&c__1, (char *)&_BLNK__1.unew[i__ + i__ * 1335 - 1336], (
 		ftnlen)sizeof(doublereal));
@@ -224,6 +223,7 @@ L90:
     ucheck = 0.;
     vcheck = 0.;
     i__1 = mnmin;
+    #pragma omp parallel for
     for (icheck = 1; icheck <= i__1; ++icheck) {
 	i__2 = mnmin;
 	for (jcheck = 1; jcheck <= i__2; ++jcheck) {
