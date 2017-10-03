@@ -1,5 +1,6 @@
-file=a
+g++ -O3 -std=c++11 a.cc tbr.s timebase.c -m64 -pthread && ./a.out
+g++ -O3 -std=c++11 b.cc tbr.s timebase.c -m64 -pthread && ./a.out
+g++ -O3 -std=c++11 c.cc tbr.s timebase.c -m64 -pthread && ./a.out
+g++ -O3 -std=c++11 d.cc tbr.s timebase.c -m64 -pthread && ./a.out
+g++ -O3 -std=c++11 e.cc tbr.s timebase.c -m64 -pthread && ./a.out
 
-echo $file.cc
-
-g++ -O3 -std=c++11 $file.cc tbr.s timebase.c -m64 -pthread && ./a.out

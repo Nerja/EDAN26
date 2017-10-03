@@ -1,0 +1,1909 @@
+
+d.out:     file format elf64-powerpc
+
+
+Disassembly of section .init:
+
+0000000010000b60 <00000024.plt_call.__gmon_start__>:
+    10000b60:	f8 41 00 28 	std     r2,40(r1)
+    10000b64:	e9 82 80 90 	ld      r12,-32624(r2)
+    10000b68:	7d 89 03 a6 	mtctr   r12
+    10000b6c:	e8 42 80 98 	ld      r2,-32616(r2)
+    10000b70:	28 22 00 00 	cmpldi  r2,0
+    10000b74:	4c e2 04 20 	bnectr+ 
+    10000b78:	48 00 1b 28 	b       100026a0 <__gmon_start__@plt>
+
+0000000010000b7c <._init>:
+    10000b7c:	7c 08 02 a6 	mflr    r0
+    10000b80:	f8 01 00 10 	std     r0,16(r1)
+    10000b84:	f8 21 ff 91 	stdu    r1,-112(r1)
+    10000b88:	60 00 00 00 	nop
+    10000b8c:	e8 02 80 08 	ld      r0,-32760(r2)
+    10000b90:	2f a0 00 00 	cmpdi   cr7,r0,0
+    10000b94:	41 be 00 0c 	beq     cr7,10000ba0 <._init+0x24>
+    10000b98:	4b ff ff c9 	bl      10000b60 <00000024.plt_call.__gmon_start__>
+    10000b9c:	e8 41 00 28 	ld      r2,40(r1)
+    10000ba0:	38 21 00 70 	addi    r1,r1,112
+    10000ba4:	e8 01 00 10 	ld      r0,16(r1)
+    10000ba8:	7c 08 03 a6 	mtlr    r0
+    10000bac:	4e 80 00 20 	blr
+
+Disassembly of section .text:
+
+0000000010000bc0 <0000005b.plt_call.printf@@GLIBC_2.4>:
+    10000bc0:	f8 41 00 28 	std     r2,40(r1)
+    10000bc4:	e9 82 81 80 	ld      r12,-32384(r2)
+    10000bc8:	7d 89 03 a6 	mtctr   r12
+    10000bcc:	e8 42 81 88 	ld      r2,-32376(r2)
+    10000bd0:	28 22 00 00 	cmpldi  r2,0
+    10000bd4:	4c e2 04 20 	bnectr+ 
+    10000bd8:	48 00 1b 18 	b       100026f0 <printf@plt>
+
+0000000010000bdc <0000005b.plt_call.memset@@GLIBC_2.3>:
+    10000bdc:	f8 41 00 28 	std     r2,40(r1)
+    10000be0:	e9 82 81 20 	ld      r12,-32480(r2)
+    10000be4:	7d 89 03 a6 	mtctr   r12
+    10000be8:	e8 42 81 28 	ld      r2,-32472(r2)
+    10000bec:	28 22 00 00 	cmpldi  r2,0
+    10000bf0:	4c e2 04 20 	bnectr+ 
+    10000bf4:	48 00 1a dc 	b       100026d0 <memset@plt>
+
+0000000010000bf8 <0000005b.plt_call.fwrite@@GLIBC_2.3>:
+    10000bf8:	f8 41 00 28 	std     r2,40(r1)
+    10000bfc:	e9 82 81 c8 	ld      r12,-32312(r2)
+    10000c00:	7d 89 03 a6 	mtctr   r12
+    10000c04:	e8 42 81 d0 	ld      r2,-32304(r2)
+    10000c08:	28 22 00 00 	cmpldi  r2,0
+    10000c0c:	4c e2 04 20 	bnectr+ 
+    10000c10:	48 00 1a f8 	b       10002708 <fwrite@plt>
+
+0000000010000c14 <0000005b.plt_call.__libc_start_main@@GLIBC_2.3>:
+    10000c14:	f8 41 00 28 	std     r2,40(r1)
+    10000c18:	e9 82 82 10 	ld      r12,-32240(r2)
+    10000c1c:	7d 89 03 a6 	mtctr   r12
+    10000c20:	e8 42 82 18 	ld      r2,-32232(r2)
+    10000c24:	28 22 00 00 	cmpldi  r2,0
+    10000c28:	4c e2 04 20 	bnectr+ 
+    10000c2c:	48 00 1a f4 	b       10002720 <__libc_start_main@plt>
+
+0000000010000c30 <0000005b.plt_call._ZSt9terminatev@@GLIBCXX_3.4>:
+    10000c30:	f8 41 00 28 	std     r2,40(r1)
+    10000c34:	e9 82 81 50 	ld      r12,-32432(r2)
+    10000c38:	7d 89 03 a6 	mtctr   r12
+    10000c3c:	e8 42 81 58 	ld      r2,-32424(r2)
+    10000c40:	28 22 00 00 	cmpldi  r2,0
+    10000c44:	4c e2 04 20 	bnectr+ 
+    10000c48:	48 00 1a 98 	b       100026e0 <_ZSt9terminatev@plt>
+
+0000000010000c4c <0000005b.plt_call.strcmp@@GLIBC_2.3>:
+    10000c4c:	f8 41 00 28 	std     r2,40(r1)
+    10000c50:	e9 82 81 b0 	ld      r12,-32336(r2)
+    10000c54:	7d 89 03 a6 	mtctr   r12
+    10000c58:	e8 42 81 b8 	ld      r2,-32328(r2)
+    10000c5c:	28 22 00 00 	cmpldi  r2,0
+    10000c60:	4c e2 04 20 	bnectr+ 
+    10000c64:	48 00 1a 9c 	b       10002700 <strcmp@plt>
+
+0000000010000c68 <0000005b.plt_call.clock_gettime@@GLIBC_2.17>:
+    10000c68:	f8 41 00 28 	std     r2,40(r1)
+    10000c6c:	e9 82 80 78 	ld      r12,-32648(r2)
+    10000c70:	7d 89 03 a6 	mtctr   r12
+    10000c74:	e8 42 80 80 	ld      r2,-32640(r2)
+    10000c78:	28 22 00 00 	cmpldi  r2,0
+    10000c7c:	4c e2 04 20 	bnectr+ 
+    10000c80:	48 00 1a 18 	b       10002698 <clock_gettime@plt>
+
+0000000010000c84 <0000005b.plt_call._ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@@GLIBCXX_3.4.11>:
+    10000c84:	f8 41 00 28 	std     r2,40(r1)
+    10000c88:	e9 82 80 d8 	ld      r12,-32552(r2)
+    10000c8c:	7d 89 03 a6 	mtctr   r12
+    10000c90:	e8 42 80 e0 	ld      r2,-32544(r2)
+    10000c94:	28 22 00 00 	cmpldi  r2,0
+    10000c98:	4c e2 04 20 	bnectr+ 
+    10000c9c:	48 00 1a 1c 	b       100026b8 <_ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@plt>
+
+0000000010000ca0 <0000005b.plt_call._Znwm@@GLIBCXX_3.4>:
+    10000ca0:	f8 41 00 28 	std     r2,40(r1)
+    10000ca4:	e9 82 81 e0 	ld      r12,-32288(r2)
+    10000ca8:	7d 89 03 a6 	mtctr   r12
+    10000cac:	e8 42 81 e8 	ld      r2,-32280(r2)
+    10000cb0:	28 22 00 00 	cmpldi  r2,0
+    10000cb4:	4c e2 04 20 	bnectr+ 
+    10000cb8:	48 00 1a 58 	b       10002710 <_Znwm@plt>
+
+0000000010000cbc <0000005b.plt_call.calloc@@GLIBC_2.3>:
+    10000cbc:	f8 41 00 28 	std     r2,40(r1)
+    10000cc0:	e9 82 81 08 	ld      r12,-32504(r2)
+    10000cc4:	7d 89 03 a6 	mtctr   r12
+    10000cc8:	e8 42 81 10 	ld      r2,-32496(r2)
+    10000ccc:	28 22 00 00 	cmpldi  r2,0
+    10000cd0:	4c e2 04 20 	bnectr+ 
+    10000cd4:	48 00 19 f4 	b       100026c8 <calloc@plt>
+
+0000000010000cd8 <0000005b.plt_call.sched_yield@@GLIBC_2.3>:
+    10000cd8:	f8 41 00 28 	std     r2,40(r1)
+    10000cdc:	e9 82 80 f0 	ld      r12,-32528(r2)
+    10000ce0:	7d 89 03 a6 	mtctr   r12
+    10000ce4:	e8 42 80 f8 	ld      r2,-32520(r2)
+    10000ce8:	28 22 00 00 	cmpldi  r2,0
+    10000cec:	4c e2 04 20 	bnectr+ 
+    10000cf0:	48 00 19 d0 	b       100026c0 <sched_yield@plt>
+
+0000000010000cf4 <0000005b.plt_call.abort@@GLIBC_2.3>:
+    10000cf4:	f8 41 00 28 	std     r2,40(r1)
+    10000cf8:	e9 82 80 c0 	ld      r12,-32576(r2)
+    10000cfc:	7d 89 03 a6 	mtctr   r12
+    10000d00:	e8 42 80 c8 	ld      r2,-32568(r2)
+    10000d04:	28 22 00 00 	cmpldi  r2,0
+    10000d08:	4c e2 04 20 	bnectr+ 
+    10000d0c:	48 00 19 a4 	b       100026b0 <abort@plt>
+
+0000000010000d10 <0000005b.plt_call.free@@GLIBC_2.3>:
+    10000d10:	f8 41 00 28 	std     r2,40(r1)
+    10000d14:	e9 82 80 60 	ld      r12,-32672(r2)
+    10000d18:	7d 89 03 a6 	mtctr   r12
+    10000d1c:	e8 42 80 68 	ld      r2,-32664(r2)
+    10000d20:	28 22 00 00 	cmpldi  r2,0
+    10000d24:	4c e2 04 20 	bnectr+ 
+    10000d28:	48 00 19 68 	b       10002690 <free@plt>
+
+0000000010000d2c <0000005b.plt_call._ZNSt6thread4joinEv@@GLIBCXX_3.4.11>:
+    10000d2c:	f8 41 00 28 	std     r2,40(r1)
+    10000d30:	e9 82 81 38 	ld      r12,-32456(r2)
+    10000d34:	7d 89 03 a6 	mtctr   r12
+    10000d38:	e8 42 81 40 	ld      r2,-32448(r2)
+    10000d3c:	28 22 00 00 	cmpldi  r2,0
+    10000d40:	4c e2 04 20 	bnectr+ 
+    10000d44:	48 00 19 94 	b       100026d8 <_ZNSt6thread4joinEv@plt>
+
+0000000010000d48 <0000005b.plt_call.fprintf@@GLIBC_2.4>:
+    10000d48:	f8 41 00 28 	std     r2,40(r1)
+    10000d4c:	e9 82 81 98 	ld      r12,-32360(r2)
+    10000d50:	7d 89 03 a6 	mtctr   r12
+    10000d54:	e8 42 81 a0 	ld      r2,-32352(r2)
+    10000d58:	28 22 00 00 	cmpldi  r2,0
+    10000d5c:	4c e2 04 20 	bnectr+ 
+    10000d60:	48 00 19 98 	b       100026f8 <fprintf@plt>
+
+0000000010000d64 <0000005b.plt_call._ZdlPv@@GLIBCXX_3.4>:
+    10000d64:	f8 41 00 28 	std     r2,40(r1)
+    10000d68:	e9 82 80 a8 	ld      r12,-32600(r2)
+    10000d6c:	7d 89 03 a6 	mtctr   r12
+    10000d70:	e8 42 80 b0 	ld      r2,-32592(r2)
+    10000d74:	28 22 00 00 	cmpldi  r2,0
+    10000d78:	4c e2 04 20 	bnectr+ 
+    10000d7c:	48 00 19 2c 	b       100026a8 <_ZdlPv@plt>
+
+0000000010000d80 <0000005b.plt_call.puts@@GLIBC_2.3>:
+    10000d80:	f8 41 00 28 	std     r2,40(r1)
+    10000d84:	e9 82 81 68 	ld      r12,-32408(r2)
+    10000d88:	7d 89 03 a6 	mtctr   r12
+    10000d8c:	e8 42 81 70 	ld      r2,-32400(r2)
+    10000d90:	28 22 00 00 	cmpldi  r2,0
+    10000d94:	4c e2 04 20 	bnectr+ 
+    10000d98:	48 00 19 50 	b       100026e8 <puts@plt>
+
+0000000010000d9c <0000005b.plt_call._Unwind_Resume@@GCC_3.0>:
+    10000d9c:	f8 41 00 28 	std     r2,40(r1)
+    10000da0:	e9 82 81 f8 	ld      r12,-32264(r2)
+    10000da4:	7d 89 03 a6 	mtctr   r12
+    10000da8:	e8 42 82 00 	ld      r2,-32256(r2)
+    10000dac:	28 22 00 00 	cmpldi  r2,0
+    10000db0:	4c e2 04 20 	bnectr+ 
+    10000db4:	48 00 19 64 	b       10002718 <_Unwind_Resume@plt>
+    10000db8:	60 00 00 00 	nop
+    10000dbc:	60 00 00 00 	nop
+
+0000000010000dc0 <.main>:
+    10000dc0:	7c 08 02 a6 	mflr    r0
+    10000dc4:	db a1 ff e8 	stfd    f29,-24(r1)
+    10000dc8:	db c1 ff f0 	stfd    f30,-16(r1)
+    10000dcc:	3c 62 ff fe 	addis   r3,r2,-2
+    10000dd0:	db e1 ff f8 	stfd    f31,-8(r1)
+    10000dd4:	fa 41 ff 78 	std     r18,-136(r1)
+    10000dd8:	38 63 73 70 	addi    r3,r3,29552
+    10000ddc:	fa 61 ff 80 	std     r19,-128(r1)
+    10000de0:	fa 81 ff 88 	std     r20,-120(r1)
+    10000de4:	fa a1 ff 90 	std     r21,-112(r1)
+    10000de8:	fa c1 ff 98 	std     r22,-104(r1)
+    10000dec:	fa e1 ff a0 	std     r23,-96(r1)
+    10000df0:	fb 01 ff a8 	std     r24,-88(r1)
+    10000df4:	f8 01 00 10 	std     r0,16(r1)
+    10000df8:	fb 21 ff b0 	std     r25,-80(r1)
+    10000dfc:	fb 41 ff b8 	std     r26,-72(r1)
+    10000e00:	fb 61 ff c0 	std     r27,-64(r1)
+    10000e04:	fb 81 ff c8 	std     r28,-56(r1)
+    10000e08:	fb a1 ff d0 	std     r29,-48(r1)
+    10000e0c:	fb c1 ff d8 	std     r30,-40(r1)
+    10000e10:	fb e1 ff e0 	std     r31,-32(r1)
+    10000e14:	f8 21 fe b1 	stdu    r1,-336(r1)
+    10000e18:	4b ff ff 69 	bl      10000d80 <0000005b.plt_call.puts@@GLIBC_2.3>
+    10000e1c:	e8 41 00 28 	ld      r2,40(r1)
+    10000e20:	3d 20 00 01 	lis     r9,1
+    10000e24:	39 00 00 02 	li      r8,2
+    10000e28:	61 29 86 a0 	ori     r9,r9,34464
+    10000e2c:	60 00 00 00 	nop
+    10000e30:	2b a8 00 0d 	cmpldi  cr7,r8,13
+    10000e34:	60 00 00 00 	nop
+    10000e38:	91 22 82 30 	stw     r9,-32208(r2)
+    10000e3c:	39 20 00 0c 	li      r9,12
+    10000e40:	91 22 82 34 	stw     r9,-32204(r2)
+    10000e44:	38 e0 00 00 	li      r7,0
+    10000e48:	39 40 00 01 	li      r10,1
+    10000e4c:	7c e7 52 14 	add     r7,r7,r10
+    10000e50:	41 9e 00 3c 	beq     cr7,10000e8c <.main+0xcc>
+    10000e54:	60 00 00 00 	nop
+    10000e58:	60 00 00 00 	nop
+    10000e5c:	60 00 00 00 	nop
+    10000e60:	38 c8 ff ff 	addi    r6,r8,-1
+    10000e64:	7d 09 43 78 	mr      r9,r8
+    10000e68:	7c c9 03 a6 	mtctr   r6
+    10000e6c:	39 40 00 01 	li      r10,1
+    10000e70:	7d 4a 49 d2 	mulld   r10,r10,r9
+    10000e74:	39 29 ff ff 	addi    r9,r9,-1
+    10000e78:	42 00 ff f8 	bdnz    10000e70 <.main+0xb0>
+    10000e7c:	39 08 00 01 	addi    r8,r8,1
+    10000e80:	7c e7 52 14 	add     r7,r7,r10
+    10000e84:	2b a8 00 0d 	cmpldi  cr7,r8,13
+    10000e88:	40 9e ff d8 	bne     cr7,10000e60 <.main+0xa0>
+    10000e8c:	3e a0 00 01 	lis     r21,1
+    10000e90:	38 60 00 20 	li      r3,32
+    10000e94:	62 b5 86 a0 	ori     r21,r21,34464
+    10000e98:	7e a7 a9 d2 	mulld   r21,r7,r21
+    10000e9c:	4b ff fe 05 	bl      10000ca0 <0000005b.plt_call._Znwm@@GLIBCXX_3.4>
+    10000ea0:	e8 41 00 28 	ld      r2,40(r1)
+    10000ea4:	60 00 00 00 	nop
+    10000ea8:	38 80 00 04 	li      r4,4
+    10000eac:	7c 7f 1b 78 	mr      r31,r3
+    10000eb0:	e8 62 82 36 	lwa     r3,-32204(r2)
+    10000eb4:	39 20 00 00 	li      r9,0
+    10000eb8:	99 3f 00 18 	stb     r9,24(r31)
+    10000ebc:	39 20 00 00 	li      r9,0
+    10000ec0:	38 63 00 01 	addi    r3,r3,1
+    10000ec4:	f9 3f 00 10 	std     r9,16(r31)
+    10000ec8:	f8 7f 00 08 	std     r3,8(r31)
+    10000ecc:	4b ff fd f1 	bl      10000cbc <0000005b.plt_call.calloc@@GLIBC_2.3>
+    10000ed0:	e8 41 00 28 	ld      r2,40(r1)
+    10000ed4:	2f a3 00 00 	cmpdi   cr7,r3,0
+    10000ed8:	f8 7f 00 00 	std     r3,0(r31)
+    10000edc:	41 9e 09 88 	beq     cr7,10001864 <.main+0xaa4>
+    10000ee0:	60 00 00 00 	nop
+    10000ee4:	60 00 00 00 	nop
+    10000ee8:	fb e2 82 38 	std     r31,-32200(r2)
+    10000eec:	eb 62 80 40 	ld      r27,-32704(r2)
+    10000ef0:	3d 42 ff ff 	addis   r10,r2,-1
+    10000ef4:	3c c2 ff ff 	addis   r6,r2,-1
+    10000ef8:	3d 22 ff ff 	addis   r9,r2,-1
+    10000efc:	3b 8a 7b 90 	addi    r28,r10,31632
+    10000f00:	3e c2 ff fe 	addis   r22,r2,-2
+    10000f04:	60 00 00 00 	nop
+    10000f08:	3b 26 7b 68 	addi    r25,r6,31592
+    10000f0c:	3b 49 7b 08 	addi    r26,r9,31496
+    10000f10:	3e 82 ff ff 	addis   r20,r2,-1
+    10000f14:	3a e0 00 0a 	li      r23,10
+    10000f18:	3a d6 73 48 	addi    r22,r22,29512
+    10000f1c:	3b 02 82 30 	addi    r24,r2,-32208
+    10000f20:	3a 94 7f 40 	addi    r20,r20,32576
+    10000f24:	3b c0 00 00 	li      r30,0
+    10000f28:	3a 60 00 ff 	li      r19,255
+    10000f2c:	3b a0 00 01 	li      r29,1
+    10000f30:	38 60 00 01 	li      r3,1
+    10000f34:	38 81 00 70 	addi    r4,r1,112
+    10000f38:	4b ff fd 31 	bl      10000c68 <0000005b.plt_call.clock_gettime@@GLIBC_2.17>
+    10000f3c:	e8 41 00 28 	ld      r2,40(r1)
+    10000f40:	c9 61 00 78 	lfd     f11,120(r1)
+    10000f44:	c3 d6 00 00 	lfs     f30,0(r22)
+    10000f48:	c9 81 00 70 	lfd     f12,112(r1)
+    10000f4c:	7c 00 04 ac 	sync    
+    10000f50:	fc 00 5e 9c 	fcfid   f0,f11
+    10000f54:	fb d8 00 18 	std     r30,24(r24)
+    10000f58:	ff e0 66 9c 	fcfid   f31,f12
+    10000f5c:	fc 00 f0 24 	fdiv    f0,f0,f30
+    10000f60:	ea 58 00 08 	ld      r18,8(r24)
+    10000f64:	39 12 00 18 	addi    r8,r18,24
+    10000f68:	55 07 1e f8 	rlwinm  r7,r8,3,27,28
+    10000f6c:	79 08 07 64 	rldicr  r8,r8,0,61
+    10000f70:	68 e7 00 18 	xori    r7,r7,24
+    10000f74:	7e 65 38 30 	slw     r5,r19,r7
+    10000f78:	7f a6 38 30 	slw     r6,r29,r7
+    10000f7c:	ff df 00 2a 	fadd    f30,f31,f0
+    10000f80:	7d 20 40 28 	lwarx   r9,0,r8
+    10000f84:	7d 2a 28 78 	andc    r10,r9,r5
+    10000f88:	7d 4a 33 78 	or      r10,r10,r6
+    10000f8c:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10000f90:	40 a2 ff f0 	bne     10000f80 <.main+0x1c0>
+    10000f94:	4c 00 01 2c 	isync
+    10000f98:	7d 29 3c 30 	srw     r9,r9,r7
+    10000f9c:	79 3f 06 21 	clrldi. r31,r9,56
+    10000fa0:	40 82 ff e0 	bne     10000f80 <.main+0x1c0>
+    10000fa4:	fb f2 00 10 	std     r31,16(r18)
+    10000fa8:	e8 b2 00 08 	ld      r5,8(r18)
+    10000fac:	38 80 00 00 	li      r4,0
+    10000fb0:	e8 72 00 00 	ld      r3,0(r18)
+    10000fb4:	78 a5 17 64 	rldicr  r5,r5,2,61
+    10000fb8:	4b ff fc 25 	bl      10000bdc <0000005b.plt_call.memset@@GLIBC_2.3>
+    10000fbc:	e8 41 00 28 	ld      r2,40(r1)
+    10000fc0:	7c 20 04 ac 	lwsync
+    10000fc4:	9b f2 00 18 	stb     r31,24(r18)
+    10000fc8:	fb e1 00 a0 	std     r31,160(r1)
+    10000fcc:	38 60 00 30 	li      r3,48
+    10000fd0:	4b ff fc d1 	bl      10000ca0 <0000005b.plt_call._Znwm@@GLIBCXX_3.4>
+    10000fd4:	e8 41 00 28 	ld      r2,40(r1)
+    10000fd8:	7f 44 d3 78 	mr      r4,r26
+    10000fdc:	93 a3 00 08 	stw     r29,8(r3)
+    10000fe0:	93 a3 00 0c 	stw     r29,12(r3)
+    10000fe4:	fb 83 00 00 	std     r28,0(r3)
+    10000fe8:	fb e3 00 18 	std     r31,24(r3)
+    10000fec:	fb e3 00 20 	std     r31,32(r3)
+    10000ff0:	fb 23 00 10 	std     r25,16(r3)
+    10000ff4:	fa 83 00 28 	std     r20,40(r3)
+    10000ff8:	7c 72 1b 78 	mr      r18,r3
+    10000ffc:	48 00 10 d5 	bl      100020d0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info>
+    10001000:	60 00 00 00 	nop
+    10001004:	38 81 00 70 	addi    r4,r1,112
+    10001008:	fa 41 00 78 	std     r18,120(r1)
+    1000100c:	f8 61 00 70 	std     r3,112(r1)
+    10001010:	38 61 00 a0 	addi    r3,r1,160
+    10001014:	4b ff fc 71 	bl      10000c84 <0000005b.plt_call._ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@@GLIBCXX_3.4.11>
+    10001018:	e8 41 00 28 	ld      r2,40(r1)
+    1000101c:	eb e1 00 78 	ld      r31,120(r1)
+    10001020:	2f bf 00 00 	cmpdi   cr7,r31,0
+    10001024:	41 9e 00 38 	beq     cr7,1000105c <.main+0x29c>
+    10001028:	60 00 00 00 	nop
+    1000102c:	e9 22 80 38 	ld      r9,-32712(r2)
+    10001030:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001034:	41 9e 04 9c 	beq     cr7,100014d0 <.main+0x710>
+    10001038:	7c 20 04 ac 	lwsync
+    1000103c:	39 1f 00 08 	addi    r8,r31,8
+    10001040:	7d 20 40 28 	lwarx   r9,0,r8
+    10001044:	39 49 ff ff 	addi    r10,r9,-1
+    10001048:	7d 40 41 2d 	stwcx.  r10,0,r8
+    1000104c:	40 a2 ff f4 	bne     10001040 <.main+0x280>
+    10001050:	4c 00 01 2c 	isync
+    10001054:	2b 89 00 01 	cmplwi  cr7,r9,1
+    10001058:	41 9e 07 98 	beq     cr7,100017f0 <.main+0xa30>
+    1000105c:	fb c1 00 98 	std     r30,152(r1)
+    10001060:	38 60 00 30 	li      r3,48
+    10001064:	4b ff fc 3d 	bl      10000ca0 <0000005b.plt_call._Znwm@@GLIBCXX_3.4>
+    10001068:	e8 41 00 28 	ld      r2,40(r1)
+    1000106c:	3e 42 ff ff 	addis   r18,r2,-1
+    10001070:	93 a3 00 08 	stw     r29,8(r3)
+    10001074:	3a 52 7f 58 	addi    r18,r18,32600
+    10001078:	93 a3 00 0c 	stw     r29,12(r3)
+    1000107c:	fb 83 00 00 	std     r28,0(r3)
+    10001080:	fb c3 00 18 	std     r30,24(r3)
+    10001084:	fb c3 00 20 	std     r30,32(r3)
+    10001088:	fb 23 00 10 	std     r25,16(r3)
+    1000108c:	fa 43 00 28 	std     r18,40(r3)
+    10001090:	7f 44 d3 78 	mr      r4,r26
+    10001094:	7c 7f 1b 78 	mr      r31,r3
+    10001098:	48 00 10 39 	bl      100020d0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info>
+    1000109c:	60 00 00 00 	nop
+    100010a0:	38 81 00 70 	addi    r4,r1,112
+    100010a4:	fb e1 00 78 	std     r31,120(r1)
+    100010a8:	f8 61 00 70 	std     r3,112(r1)
+    100010ac:	38 61 00 98 	addi    r3,r1,152
+    100010b0:	4b ff fb d5 	bl      10000c84 <0000005b.plt_call._ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@@GLIBCXX_3.4.11>
+    100010b4:	e8 41 00 28 	ld      r2,40(r1)
+    100010b8:	eb e1 00 78 	ld      r31,120(r1)
+    100010bc:	2f bf 00 00 	cmpdi   cr7,r31,0
+    100010c0:	41 9e 00 38 	beq     cr7,100010f8 <.main+0x338>
+    100010c4:	60 00 00 00 	nop
+    100010c8:	e9 22 80 38 	ld      r9,-32712(r2)
+    100010cc:	2f a9 00 00 	cmpdi   cr7,r9,0
+    100010d0:	41 9e 04 80 	beq     cr7,10001550 <.main+0x790>
+    100010d4:	7c 20 04 ac 	lwsync
+    100010d8:	39 1f 00 08 	addi    r8,r31,8
+    100010dc:	7d 20 40 28 	lwarx   r9,0,r8
+    100010e0:	39 49 ff ff 	addi    r10,r9,-1
+    100010e4:	7d 40 41 2d 	stwcx.  r10,0,r8
+    100010e8:	40 a2 ff f4 	bne     100010dc <.main+0x31c>
+    100010ec:	4c 00 01 2c 	isync
+    100010f0:	2b 89 00 01 	cmplwi  cr7,r9,1
+    100010f4:	41 9e 08 48 	beq     cr7,1000193c <.main+0xb7c>
+    100010f8:	fb c1 00 90 	std     r30,144(r1)
+    100010fc:	38 60 00 30 	li      r3,48
+    10001100:	4b ff fb a1 	bl      10000ca0 <0000005b.plt_call._Znwm@@GLIBCXX_3.4>
+    10001104:	e8 41 00 28 	ld      r2,40(r1)
+    10001108:	93 a3 00 08 	stw     r29,8(r3)
+    1000110c:	93 a3 00 0c 	stw     r29,12(r3)
+    10001110:	fb 83 00 00 	std     r28,0(r3)
+    10001114:	fb c3 00 18 	std     r30,24(r3)
+    10001118:	fb c3 00 20 	std     r30,32(r3)
+    1000111c:	fb 23 00 10 	std     r25,16(r3)
+    10001120:	fa 43 00 28 	std     r18,40(r3)
+    10001124:	7f 44 d3 78 	mr      r4,r26
+    10001128:	7c 7f 1b 78 	mr      r31,r3
+    1000112c:	48 00 0f a5 	bl      100020d0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info>
+    10001130:	60 00 00 00 	nop
+    10001134:	38 81 00 70 	addi    r4,r1,112
+    10001138:	fb e1 00 78 	std     r31,120(r1)
+    1000113c:	f8 61 00 70 	std     r3,112(r1)
+    10001140:	38 61 00 90 	addi    r3,r1,144
+    10001144:	4b ff fb 41 	bl      10000c84 <0000005b.plt_call._ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@@GLIBCXX_3.4.11>
+    10001148:	e8 41 00 28 	ld      r2,40(r1)
+    1000114c:	eb e1 00 78 	ld      r31,120(r1)
+    10001150:	2f bf 00 00 	cmpdi   cr7,r31,0
+    10001154:	41 9e 00 38 	beq     cr7,1000118c <.main+0x3cc>
+    10001158:	60 00 00 00 	nop
+    1000115c:	e9 22 80 38 	ld      r9,-32712(r2)
+    10001160:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001164:	41 9e 04 6c 	beq     cr7,100015d0 <.main+0x810>
+    10001168:	7c 20 04 ac 	lwsync
+    1000116c:	39 1f 00 08 	addi    r8,r31,8
+    10001170:	7d 20 40 28 	lwarx   r9,0,r8
+    10001174:	39 49 ff ff 	addi    r10,r9,-1
+    10001178:	7d 40 41 2d 	stwcx.  r10,0,r8
+    1000117c:	40 a2 ff f4 	bne     10001170 <.main+0x3b0>
+    10001180:	4c 00 01 2c 	isync
+    10001184:	2b 89 00 01 	cmplwi  cr7,r9,1
+    10001188:	41 9e 06 18 	beq     cr7,100017a0 <.main+0x9e0>
+    1000118c:	fb c1 00 88 	std     r30,136(r1)
+    10001190:	38 60 00 30 	li      r3,48
+    10001194:	4b ff fb 0d 	bl      10000ca0 <0000005b.plt_call._Znwm@@GLIBCXX_3.4>
+    10001198:	e8 41 00 28 	ld      r2,40(r1)
+    1000119c:	93 a3 00 08 	stw     r29,8(r3)
+    100011a0:	93 a3 00 0c 	stw     r29,12(r3)
+    100011a4:	fb 83 00 00 	std     r28,0(r3)
+    100011a8:	fb c3 00 18 	std     r30,24(r3)
+    100011ac:	fb c3 00 20 	std     r30,32(r3)
+    100011b0:	fb 23 00 10 	std     r25,16(r3)
+    100011b4:	fa 43 00 28 	std     r18,40(r3)
+    100011b8:	7f 44 d3 78 	mr      r4,r26
+    100011bc:	7c 7f 1b 78 	mr      r31,r3
+    100011c0:	48 00 0f 11 	bl      100020d0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info>
+    100011c4:	60 00 00 00 	nop
+    100011c8:	38 81 00 70 	addi    r4,r1,112
+    100011cc:	fb e1 00 78 	std     r31,120(r1)
+    100011d0:	f8 61 00 70 	std     r3,112(r1)
+    100011d4:	38 61 00 88 	addi    r3,r1,136
+    100011d8:	4b ff fa ad 	bl      10000c84 <0000005b.plt_call._ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@@GLIBCXX_3.4.11>
+    100011dc:	e8 41 00 28 	ld      r2,40(r1)
+    100011e0:	eb e1 00 78 	ld      r31,120(r1)
+    100011e4:	2f bf 00 00 	cmpdi   cr7,r31,0
+    100011e8:	41 9e 00 38 	beq     cr7,10001220 <.main+0x460>
+    100011ec:	60 00 00 00 	nop
+    100011f0:	e9 22 80 38 	ld      r9,-32712(r2)
+    100011f4:	2f a9 00 00 	cmpdi   cr7,r9,0
+    100011f8:	41 9e 04 58 	beq     cr7,10001650 <.main+0x890>
+    100011fc:	7c 20 04 ac 	lwsync
+    10001200:	39 1f 00 08 	addi    r8,r31,8
+    10001204:	7d 20 40 28 	lwarx   r9,0,r8
+    10001208:	39 49 ff ff 	addi    r10,r9,-1
+    1000120c:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10001210:	40 a2 ff f4 	bne     10001204 <.main+0x444>
+    10001214:	4c 00 01 2c 	isync
+    10001218:	2b 89 00 01 	cmplwi  cr7,r9,1
+    1000121c:	41 9e 05 10 	beq     cr7,1000172c <.main+0x96c>
+    10001220:	fb c1 00 80 	std     r30,128(r1)
+    10001224:	38 60 00 30 	li      r3,48
+    10001228:	4b ff fa 79 	bl      10000ca0 <0000005b.plt_call._Znwm@@GLIBCXX_3.4>
+    1000122c:	e8 41 00 28 	ld      r2,40(r1)
+    10001230:	93 a3 00 08 	stw     r29,8(r3)
+    10001234:	93 a3 00 0c 	stw     r29,12(r3)
+    10001238:	fb 83 00 00 	std     r28,0(r3)
+    1000123c:	fb c3 00 18 	std     r30,24(r3)
+    10001240:	fb c3 00 20 	std     r30,32(r3)
+    10001244:	fb 23 00 10 	std     r25,16(r3)
+    10001248:	fa 43 00 28 	std     r18,40(r3)
+    1000124c:	7f 44 d3 78 	mr      r4,r26
+    10001250:	7c 7f 1b 78 	mr      r31,r3
+    10001254:	48 00 0e 7d 	bl      100020d0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info>
+    10001258:	60 00 00 00 	nop
+    1000125c:	38 81 00 70 	addi    r4,r1,112
+    10001260:	fb e1 00 78 	std     r31,120(r1)
+    10001264:	f8 61 00 70 	std     r3,112(r1)
+    10001268:	38 61 00 80 	addi    r3,r1,128
+    1000126c:	4b ff fa 19 	bl      10000c84 <0000005b.plt_call._ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@@GLIBCXX_3.4.11>
+    10001270:	e8 41 00 28 	ld      r2,40(r1)
+    10001274:	eb e1 00 78 	ld      r31,120(r1)
+    10001278:	2f bf 00 00 	cmpdi   cr7,r31,0
+    1000127c:	41 9e 00 38 	beq     cr7,100012b4 <.main+0x4f4>
+    10001280:	60 00 00 00 	nop
+    10001284:	e9 22 80 38 	ld      r9,-32712(r2)
+    10001288:	2f a9 00 00 	cmpdi   cr7,r9,0
+    1000128c:	41 9e 01 c4 	beq     cr7,10001450 <.main+0x690>
+    10001290:	7c 20 04 ac 	lwsync
+    10001294:	39 1f 00 08 	addi    r8,r31,8
+    10001298:	7d 20 40 28 	lwarx   r9,0,r8
+    1000129c:	39 49 ff ff 	addi    r10,r9,-1
+    100012a0:	7d 40 41 2d 	stwcx.  r10,0,r8
+    100012a4:	40 a2 ff f4 	bne     10001298 <.main+0x4d8>
+    100012a8:	4c 00 01 2c 	isync
+    100012ac:	2b 89 00 01 	cmplwi  cr7,r9,1
+    100012b0:	41 9e 06 18 	beq     cr7,100018c8 <.main+0xb08>
+    100012b4:	38 61 00 a0 	addi    r3,r1,160
+    100012b8:	4b ff fa 75 	bl      10000d2c <0000005b.plt_call._ZNSt6thread4joinEv@@GLIBCXX_3.4.11>
+    100012bc:	e8 41 00 28 	ld      r2,40(r1)
+    100012c0:	38 61 00 98 	addi    r3,r1,152
+    100012c4:	4b ff fa 69 	bl      10000d2c <0000005b.plt_call._ZNSt6thread4joinEv@@GLIBCXX_3.4.11>
+    100012c8:	e8 41 00 28 	ld      r2,40(r1)
+    100012cc:	38 61 00 90 	addi    r3,r1,144
+    100012d0:	4b ff fa 5d 	bl      10000d2c <0000005b.plt_call._ZNSt6thread4joinEv@@GLIBCXX_3.4.11>
+    100012d4:	e8 41 00 28 	ld      r2,40(r1)
+    100012d8:	38 61 00 88 	addi    r3,r1,136
+    100012dc:	4b ff fa 51 	bl      10000d2c <0000005b.plt_call._ZNSt6thread4joinEv@@GLIBCXX_3.4.11>
+    100012e0:	e8 41 00 28 	ld      r2,40(r1)
+    100012e4:	38 61 00 80 	addi    r3,r1,128
+    100012e8:	4b ff fa 45 	bl      10000d2c <0000005b.plt_call._ZNSt6thread4joinEv@@GLIBCXX_3.4.11>
+    100012ec:	e8 41 00 28 	ld      r2,40(r1)
+    100012f0:	e9 21 00 80 	ld      r9,128(r1)
+    100012f4:	2f a9 00 00 	cmpdi   cr7,r9,0
+    100012f8:	40 9e 05 c8 	bne     cr7,100018c0 <.main+0xb00>
+    100012fc:	e9 21 00 88 	ld      r9,136(r1)
+    10001300:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001304:	40 9e 05 bc 	bne     cr7,100018c0 <.main+0xb00>
+    10001308:	e9 21 00 90 	ld      r9,144(r1)
+    1000130c:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001310:	40 9e 05 b0 	bne     cr7,100018c0 <.main+0xb00>
+    10001314:	e9 21 00 98 	ld      r9,152(r1)
+    10001318:	2f a9 00 00 	cmpdi   cr7,r9,0
+    1000131c:	40 9e 05 a4 	bne     cr7,100018c0 <.main+0xb00>
+    10001320:	e9 21 00 a0 	ld      r9,160(r1)
+    10001324:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001328:	40 9e 05 98 	bne     cr7,100018c0 <.main+0xb00>
+    1000132c:	38 81 00 70 	addi    r4,r1,112
+    10001330:	38 60 00 01 	li      r3,1
+    10001334:	4b ff f9 35 	bl      10000c68 <0000005b.plt_call.clock_gettime@@GLIBC_2.17>
+    10001338:	e8 41 00 28 	ld      r2,40(r1)
+    1000133c:	c8 01 00 78 	lfd     f0,120(r1)
+    10001340:	c9 61 00 70 	lfd     f11,112(r1)
+    10001344:	fd 80 06 9c 	fcfid   f12,f0
+    10001348:	c0 16 00 00 	lfs     f0,0(r22)
+    1000134c:	ff e0 5e 9c 	fcfid   f31,f11
+    10001350:	7c 00 04 ac 	sync    
+    10001354:	fc 0c 00 24 	fdiv    f0,f12,f0
+    10001358:	e9 38 00 18 	ld      r9,24(r24)
+    1000135c:	fc 1f 00 2a 	fadd    f0,f31,f0
+    10001360:	7f 89 48 00 	cmpw    cr7,r9,r9
+    10001364:	40 9e 00 04 	bne     cr7,10001368 <.main+0x5a8>
+    10001368:	4c 00 01 2c 	isync
+    1000136c:	7f b5 48 40 	cmpld   cr7,r21,r9
+    10001370:	40 9e 05 a4 	bne     cr7,10001914 <.main+0xb54>
+    10001374:	ff e0 f0 28 	fsub    f31,f0,f30
+    10001378:	3c 62 ff fe 	addis   r3,r2,-2
+    1000137c:	3a f7 ff ff 	addi    r23,r23,-1
+    10001380:	38 63 73 b8 	addi    r3,r3,29624
+    10001384:	db e1 00 b0 	stfd    f31,176(r1)
+    10001388:	fc 20 f8 90 	fmr     f1,f31
+    1000138c:	60 42 00 00 	ori     r2,r2,0
+    10001390:	e8 81 00 b0 	ld      r4,176(r1)
+    10001394:	4b ff f8 2d 	bl      10000bc0 <0000005b.plt_call.printf@@GLIBC_2.4>
+    10001398:	e8 41 00 28 	ld      r2,40(r1)
+    1000139c:	7a f7 00 21 	clrldi. r23,r23,32
+    100013a0:	ff bd f8 2a 	fadd    f29,f29,f31
+    100013a4:	40 82 fb 8c 	bne     10000f30 <.main+0x170>
+    100013a8:	3c c2 ff fe 	addis   r6,r2,-2
+    100013ac:	3c 62 ff fe 	addis   r3,r2,-2
+    100013b0:	c0 06 73 4c 	lfs     f0,29516(r6)
+    100013b4:	38 63 73 c8 	addi    r3,r3,29640
+    100013b8:	ff bd 00 24 	fdiv    f29,f29,f0
+    100013bc:	db a1 00 b0 	stfd    f29,176(r1)
+    100013c0:	fc 20 e8 90 	fmr     f1,f29
+    100013c4:	60 42 00 00 	ori     r2,r2,0
+    100013c8:	e8 81 00 b0 	ld      r4,176(r1)
+    100013cc:	4b ff f7 f5 	bl      10000bc0 <0000005b.plt_call.printf@@GLIBC_2.4>
+    100013d0:	e8 41 00 28 	ld      r2,40(r1)
+    100013d4:	eb f8 00 08 	ld      r31,8(r24)
+    100013d8:	2f bf 00 00 	cmpdi   cr7,r31,0
+    100013dc:	41 9e 00 1c 	beq     cr7,100013f8 <.main+0x638>
+    100013e0:	e8 7f 00 00 	ld      r3,0(r31)
+    100013e4:	4b ff f9 2d 	bl      10000d10 <0000005b.plt_call.free@@GLIBC_2.3>
+    100013e8:	e8 41 00 28 	ld      r2,40(r1)
+    100013ec:	7f e3 fb 78 	mr      r3,r31
+    100013f0:	4b ff f9 75 	bl      10000d64 <0000005b.plt_call._ZdlPv@@GLIBCXX_3.4>
+    100013f4:	e8 41 00 28 	ld      r2,40(r1)
+    100013f8:	38 21 01 50 	addi    r1,r1,336
+    100013fc:	e8 01 00 10 	ld      r0,16(r1)
+    10001400:	cb a1 ff e8 	lfd     f29,-24(r1)
+    10001404:	38 60 00 00 	li      r3,0
+    10001408:	cb c1 ff f0 	lfd     f30,-16(r1)
+    1000140c:	cb e1 ff f8 	lfd     f31,-8(r1)
+    10001410:	7c 08 03 a6 	mtlr    r0
+    10001414:	ea 41 ff 78 	ld      r18,-136(r1)
+    10001418:	ea 61 ff 80 	ld      r19,-128(r1)
+    1000141c:	ea 81 ff 88 	ld      r20,-120(r1)
+    10001420:	ea a1 ff 90 	ld      r21,-112(r1)
+    10001424:	ea c1 ff 98 	ld      r22,-104(r1)
+    10001428:	ea e1 ff a0 	ld      r23,-96(r1)
+    1000142c:	eb 01 ff a8 	ld      r24,-88(r1)
+    10001430:	eb 21 ff b0 	ld      r25,-80(r1)
+    10001434:	eb 41 ff b8 	ld      r26,-72(r1)
+    10001438:	eb 61 ff c0 	ld      r27,-64(r1)
+    1000143c:	eb 81 ff c8 	ld      r28,-56(r1)
+    10001440:	eb a1 ff d0 	ld      r29,-48(r1)
+    10001444:	eb c1 ff d8 	ld      r30,-40(r1)
+    10001448:	eb e1 ff e0 	ld      r31,-32(r1)
+    1000144c:	4e 80 00 20 	blr
+    10001450:	81 3f 00 08 	lwz     r9,8(r31)
+    10001454:	2f 89 00 01 	cmpwi   cr7,r9,1
+    10001458:	39 29 ff ff 	addi    r9,r9,-1
+    1000145c:	91 3f 00 08 	stw     r9,8(r31)
+    10001460:	40 9e fe 54 	bne     cr7,100012b4 <.main+0x4f4>
+    10001464:	e9 3f 00 00 	ld      r9,0(r31)
+    10001468:	7f e3 fb 78 	mr      r3,r31
+    1000146c:	e9 29 00 10 	ld      r9,16(r9)
+    10001470:	f8 41 00 28 	std     r2,40(r1)
+    10001474:	e9 49 00 00 	ld      r10,0(r9)
+    10001478:	e9 69 00 10 	ld      r11,16(r9)
+    1000147c:	7d 49 03 a6 	mtctr   r10
+    10001480:	e8 49 00 08 	ld      r2,8(r9)
+    10001484:	4e 80 04 21 	bctrl
+    10001488:	e8 41 00 28 	ld      r2,40(r1)
+    1000148c:	81 3f 00 0c 	lwz     r9,12(r31)
+    10001490:	39 49 ff ff 	addi    r10,r9,-1
+    10001494:	7d 29 07 b4 	extsw   r9,r9
+    10001498:	91 5f 00 0c 	stw     r10,12(r31)
+    1000149c:	2f 89 00 01 	cmpwi   cr7,r9,1
+    100014a0:	40 9e fe 14 	bne     cr7,100012b4 <.main+0x4f4>
+    100014a4:	e9 3f 00 00 	ld      r9,0(r31)
+    100014a8:	7f e3 fb 78 	mr      r3,r31
+    100014ac:	e9 29 00 18 	ld      r9,24(r9)
+    100014b0:	f8 41 00 28 	std     r2,40(r1)
+    100014b4:	e9 49 00 00 	ld      r10,0(r9)
+    100014b8:	e9 69 00 10 	ld      r11,16(r9)
+    100014bc:	7d 49 03 a6 	mtctr   r10
+    100014c0:	e8 49 00 08 	ld      r2,8(r9)
+    100014c4:	4e 80 04 21 	bctrl
+    100014c8:	e8 41 00 28 	ld      r2,40(r1)
+    100014cc:	4b ff fd e8 	b       100012b4 <.main+0x4f4>
+    100014d0:	81 3f 00 08 	lwz     r9,8(r31)
+    100014d4:	2f 89 00 01 	cmpwi   cr7,r9,1
+    100014d8:	39 29 ff ff 	addi    r9,r9,-1
+    100014dc:	91 3f 00 08 	stw     r9,8(r31)
+    100014e0:	40 9e fb 7c 	bne     cr7,1000105c <.main+0x29c>
+    100014e4:	e9 3f 00 00 	ld      r9,0(r31)
+    100014e8:	7f e3 fb 78 	mr      r3,r31
+    100014ec:	e9 29 00 10 	ld      r9,16(r9)
+    100014f0:	f8 41 00 28 	std     r2,40(r1)
+    100014f4:	e9 49 00 00 	ld      r10,0(r9)
+    100014f8:	e9 69 00 10 	ld      r11,16(r9)
+    100014fc:	7d 49 03 a6 	mtctr   r10
+    10001500:	e8 49 00 08 	ld      r2,8(r9)
+    10001504:	4e 80 04 21 	bctrl
+    10001508:	e8 41 00 28 	ld      r2,40(r1)
+    1000150c:	81 3f 00 0c 	lwz     r9,12(r31)
+    10001510:	39 49 ff ff 	addi    r10,r9,-1
+    10001514:	7d 29 07 b4 	extsw   r9,r9
+    10001518:	91 5f 00 0c 	stw     r10,12(r31)
+    1000151c:	2f 89 00 01 	cmpwi   cr7,r9,1
+    10001520:	40 9e fb 3c 	bne     cr7,1000105c <.main+0x29c>
+    10001524:	e9 3f 00 00 	ld      r9,0(r31)
+    10001528:	7f e3 fb 78 	mr      r3,r31
+    1000152c:	e9 29 00 18 	ld      r9,24(r9)
+    10001530:	f8 41 00 28 	std     r2,40(r1)
+    10001534:	e9 49 00 00 	ld      r10,0(r9)
+    10001538:	e9 69 00 10 	ld      r11,16(r9)
+    1000153c:	7d 49 03 a6 	mtctr   r10
+    10001540:	e8 49 00 08 	ld      r2,8(r9)
+    10001544:	4e 80 04 21 	bctrl
+    10001548:	e8 41 00 28 	ld      r2,40(r1)
+    1000154c:	4b ff fb 10 	b       1000105c <.main+0x29c>
+    10001550:	81 3f 00 08 	lwz     r9,8(r31)
+    10001554:	2f 89 00 01 	cmpwi   cr7,r9,1
+    10001558:	39 29 ff ff 	addi    r9,r9,-1
+    1000155c:	91 3f 00 08 	stw     r9,8(r31)
+    10001560:	40 9e fb 98 	bne     cr7,100010f8 <.main+0x338>
+    10001564:	e9 3f 00 00 	ld      r9,0(r31)
+    10001568:	7f e3 fb 78 	mr      r3,r31
+    1000156c:	e9 29 00 10 	ld      r9,16(r9)
+    10001570:	f8 41 00 28 	std     r2,40(r1)
+    10001574:	e9 49 00 00 	ld      r10,0(r9)
+    10001578:	e9 69 00 10 	ld      r11,16(r9)
+    1000157c:	7d 49 03 a6 	mtctr   r10
+    10001580:	e8 49 00 08 	ld      r2,8(r9)
+    10001584:	4e 80 04 21 	bctrl
+    10001588:	e8 41 00 28 	ld      r2,40(r1)
+    1000158c:	81 3f 00 0c 	lwz     r9,12(r31)
+    10001590:	39 49 ff ff 	addi    r10,r9,-1
+    10001594:	7d 29 07 b4 	extsw   r9,r9
+    10001598:	91 5f 00 0c 	stw     r10,12(r31)
+    1000159c:	2f 89 00 01 	cmpwi   cr7,r9,1
+    100015a0:	40 9e fb 58 	bne     cr7,100010f8 <.main+0x338>
+    100015a4:	e9 3f 00 00 	ld      r9,0(r31)
+    100015a8:	7f e3 fb 78 	mr      r3,r31
+    100015ac:	e9 29 00 18 	ld      r9,24(r9)
+    100015b0:	f8 41 00 28 	std     r2,40(r1)
+    100015b4:	e9 49 00 00 	ld      r10,0(r9)
+    100015b8:	e9 69 00 10 	ld      r11,16(r9)
+    100015bc:	7d 49 03 a6 	mtctr   r10
+    100015c0:	e8 49 00 08 	ld      r2,8(r9)
+    100015c4:	4e 80 04 21 	bctrl
+    100015c8:	e8 41 00 28 	ld      r2,40(r1)
+    100015cc:	4b ff fb 2c 	b       100010f8 <.main+0x338>
+    100015d0:	81 3f 00 08 	lwz     r9,8(r31)
+    100015d4:	2f 89 00 01 	cmpwi   cr7,r9,1
+    100015d8:	39 29 ff ff 	addi    r9,r9,-1
+    100015dc:	91 3f 00 08 	stw     r9,8(r31)
+    100015e0:	40 9e fb ac 	bne     cr7,1000118c <.main+0x3cc>
+    100015e4:	e9 3f 00 00 	ld      r9,0(r31)
+    100015e8:	7f e3 fb 78 	mr      r3,r31
+    100015ec:	e9 29 00 10 	ld      r9,16(r9)
+    100015f0:	f8 41 00 28 	std     r2,40(r1)
+    100015f4:	e9 49 00 00 	ld      r10,0(r9)
+    100015f8:	e9 69 00 10 	ld      r11,16(r9)
+    100015fc:	7d 49 03 a6 	mtctr   r10
+    10001600:	e8 49 00 08 	ld      r2,8(r9)
+    10001604:	4e 80 04 21 	bctrl
+    10001608:	e8 41 00 28 	ld      r2,40(r1)
+    1000160c:	81 3f 00 0c 	lwz     r9,12(r31)
+    10001610:	39 49 ff ff 	addi    r10,r9,-1
+    10001614:	7d 29 07 b4 	extsw   r9,r9
+    10001618:	91 5f 00 0c 	stw     r10,12(r31)
+    1000161c:	2f 89 00 01 	cmpwi   cr7,r9,1
+    10001620:	40 9e fb 6c 	bne     cr7,1000118c <.main+0x3cc>
+    10001624:	e9 3f 00 00 	ld      r9,0(r31)
+    10001628:	7f e3 fb 78 	mr      r3,r31
+    1000162c:	e9 29 00 18 	ld      r9,24(r9)
+    10001630:	f8 41 00 28 	std     r2,40(r1)
+    10001634:	e9 49 00 00 	ld      r10,0(r9)
+    10001638:	e9 69 00 10 	ld      r11,16(r9)
+    1000163c:	7d 49 03 a6 	mtctr   r10
+    10001640:	e8 49 00 08 	ld      r2,8(r9)
+    10001644:	4e 80 04 21 	bctrl
+    10001648:	e8 41 00 28 	ld      r2,40(r1)
+    1000164c:	4b ff fb 40 	b       1000118c <.main+0x3cc>
+    10001650:	81 3f 00 08 	lwz     r9,8(r31)
+    10001654:	2f 89 00 01 	cmpwi   cr7,r9,1
+    10001658:	39 29 ff ff 	addi    r9,r9,-1
+    1000165c:	91 3f 00 08 	stw     r9,8(r31)
+    10001660:	40 9e fb c0 	bne     cr7,10001220 <.main+0x460>
+    10001664:	e9 3f 00 00 	ld      r9,0(r31)
+    10001668:	7f e3 fb 78 	mr      r3,r31
+    1000166c:	e9 29 00 10 	ld      r9,16(r9)
+    10001670:	f8 41 00 28 	std     r2,40(r1)
+    10001674:	e9 49 00 00 	ld      r10,0(r9)
+    10001678:	e9 69 00 10 	ld      r11,16(r9)
+    1000167c:	7d 49 03 a6 	mtctr   r10
+    10001680:	e8 49 00 08 	ld      r2,8(r9)
+    10001684:	4e 80 04 21 	bctrl
+    10001688:	e8 41 00 28 	ld      r2,40(r1)
+    1000168c:	81 3f 00 0c 	lwz     r9,12(r31)
+    10001690:	39 49 ff ff 	addi    r10,r9,-1
+    10001694:	7d 29 07 b4 	extsw   r9,r9
+    10001698:	91 5f 00 0c 	stw     r10,12(r31)
+    1000169c:	2f 89 00 01 	cmpwi   cr7,r9,1
+    100016a0:	40 9e fb 80 	bne     cr7,10001220 <.main+0x460>
+    100016a4:	e9 3f 00 00 	ld      r9,0(r31)
+    100016a8:	7f e3 fb 78 	mr      r3,r31
+    100016ac:	e9 29 00 18 	ld      r9,24(r9)
+    100016b0:	f8 41 00 28 	std     r2,40(r1)
+    100016b4:	e9 49 00 00 	ld      r10,0(r9)
+    100016b8:	e9 69 00 10 	ld      r11,16(r9)
+    100016bc:	7d 49 03 a6 	mtctr   r10
+    100016c0:	e8 49 00 08 	ld      r2,8(r9)
+    100016c4:	4e 80 04 21 	bctrl
+    100016c8:	e8 41 00 28 	ld      r2,40(r1)
+    100016cc:	4b ff fb 54 	b       10001220 <.main+0x460>
+    100016d0:	e9 21 00 78 	ld      r9,120(r1)
+    100016d4:	7c 7f 1b 78 	mr      r31,r3
+    100016d8:	2f a9 00 00 	cmpdi   cr7,r9,0
+    100016dc:	41 9e 00 10 	beq     cr7,100016ec <.main+0x92c>
+    100016e0:	7d 23 4b 78 	mr      r3,r9
+    100016e4:	48 00 0d 4d 	bl      10002430 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv>
+    100016e8:	60 00 00 00 	nop
+    100016ec:	7f e3 fb 78 	mr      r3,r31
+    100016f0:	e9 21 00 88 	ld      r9,136(r1)
+    100016f4:	2f a9 00 00 	cmpdi   cr7,r9,0
+    100016f8:	40 9e 01 c8 	bne     cr7,100018c0 <.main+0xb00>
+    100016fc:	e9 21 00 90 	ld      r9,144(r1)
+    10001700:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001704:	40 9e 01 bc 	bne     cr7,100018c0 <.main+0xb00>
+    10001708:	e9 21 00 98 	ld      r9,152(r1)
+    1000170c:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001710:	40 9e 01 b0 	bne     cr7,100018c0 <.main+0xb00>
+    10001714:	e9 21 00 a0 	ld      r9,160(r1)
+    10001718:	2f a9 00 00 	cmpdi   cr7,r9,0
+    1000171c:	40 9e 01 a4 	bne     cr7,100018c0 <.main+0xb00>
+    10001720:	4b ff f6 7d 	bl      10000d9c <0000005b.plt_call._Unwind_Resume@@GCC_3.0>
+    10001724:	e8 41 00 28 	ld      r2,40(r1)
+    10001728:	4b ff ff c8 	b       100016f0 <.main+0x930>
+    1000172c:	e9 3f 00 00 	ld      r9,0(r31)
+    10001730:	7f e3 fb 78 	mr      r3,r31
+    10001734:	e9 29 00 10 	ld      r9,16(r9)
+    10001738:	f8 41 00 28 	std     r2,40(r1)
+    1000173c:	e9 49 00 00 	ld      r10,0(r9)
+    10001740:	e9 69 00 10 	ld      r11,16(r9)
+    10001744:	7d 49 03 a6 	mtctr   r10
+    10001748:	e8 49 00 08 	ld      r2,8(r9)
+    1000174c:	4e 80 04 21 	bctrl
+    10001750:	e8 41 00 28 	ld      r2,40(r1)
+    10001754:	7c 20 04 ac 	lwsync
+    10001758:	39 1f 00 0c 	addi    r8,r31,12
+    1000175c:	7d 20 40 28 	lwarx   r9,0,r8
+    10001760:	39 49 ff ff 	addi    r10,r9,-1
+    10001764:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10001768:	40 a2 ff f4 	bne     1000175c <.main+0x99c>
+    1000176c:	4c 00 01 2c 	isync
+    10001770:	7d 29 07 b4 	extsw   r9,r9
+    10001774:	4b ff ff 28 	b       1000169c <.main+0x8dc>
+    10001778:	e9 21 00 78 	ld      r9,120(r1)
+    1000177c:	7c 7f 1b 78 	mr      r31,r3
+    10001780:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001784:	41 9e 00 10 	beq     cr7,10001794 <.main+0x9d4>
+    10001788:	7d 23 4b 78 	mr      r3,r9
+    1000178c:	48 00 0c a5 	bl      10002430 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv>
+    10001790:	60 00 00 00 	nop
+    10001794:	7f e3 fb 78 	mr      r3,r31
+    10001798:	4b ff ff 64 	b       100016fc <.main+0x93c>
+    1000179c:	4b ff ff 60 	b       100016fc <.main+0x93c>
+    100017a0:	e9 3f 00 00 	ld      r9,0(r31)
+    100017a4:	7f e3 fb 78 	mr      r3,r31
+    100017a8:	e9 29 00 10 	ld      r9,16(r9)
+    100017ac:	f8 41 00 28 	std     r2,40(r1)
+    100017b0:	e9 49 00 00 	ld      r10,0(r9)
+    100017b4:	e9 69 00 10 	ld      r11,16(r9)
+    100017b8:	7d 49 03 a6 	mtctr   r10
+    100017bc:	e8 49 00 08 	ld      r2,8(r9)
+    100017c0:	4e 80 04 21 	bctrl
+    100017c4:	e8 41 00 28 	ld      r2,40(r1)
+    100017c8:	7c 20 04 ac 	lwsync
+    100017cc:	39 1f 00 0c 	addi    r8,r31,12
+    100017d0:	7d 20 40 28 	lwarx   r9,0,r8
+    100017d4:	39 49 ff ff 	addi    r10,r9,-1
+    100017d8:	7d 40 41 2d 	stwcx.  r10,0,r8
+    100017dc:	40 a2 ff f4 	bne     100017d0 <.main+0xa10>
+    100017e0:	4c 00 01 2c 	isync
+    100017e4:	7d 29 07 b4 	extsw   r9,r9
+    100017e8:	4b ff fe 34 	b       1000161c <.main+0x85c>
+    100017ec:	4b ff ff 28 	b       10001714 <.main+0x954>
+    100017f0:	e9 3f 00 00 	ld      r9,0(r31)
+    100017f4:	7f e3 fb 78 	mr      r3,r31
+    100017f8:	e9 29 00 10 	ld      r9,16(r9)
+    100017fc:	f8 41 00 28 	std     r2,40(r1)
+    10001800:	e9 49 00 00 	ld      r10,0(r9)
+    10001804:	e9 69 00 10 	ld      r11,16(r9)
+    10001808:	7d 49 03 a6 	mtctr   r10
+    1000180c:	e8 49 00 08 	ld      r2,8(r9)
+    10001810:	4e 80 04 21 	bctrl
+    10001814:	e8 41 00 28 	ld      r2,40(r1)
+    10001818:	7c 20 04 ac 	lwsync
+    1000181c:	39 1f 00 0c 	addi    r8,r31,12
+    10001820:	7d 20 40 28 	lwarx   r9,0,r8
+    10001824:	39 49 ff ff 	addi    r10,r9,-1
+    10001828:	7d 40 41 2d 	stwcx.  r10,0,r8
+    1000182c:	40 a2 ff f4 	bne     10001820 <.main+0xa60>
+    10001830:	4c 00 01 2c 	isync
+    10001834:	7d 29 07 b4 	extsw   r9,r9
+    10001838:	4b ff fc e4 	b       1000151c <.main+0x75c>
+    1000183c:	e9 21 00 78 	ld      r9,120(r1)
+    10001840:	7c 7f 1b 78 	mr      r31,r3
+    10001844:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001848:	41 9e 00 10 	beq     cr7,10001858 <.main+0xa98>
+    1000184c:	7d 23 4b 78 	mr      r3,r9
+    10001850:	48 00 0b e1 	bl      10002430 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv>
+    10001854:	60 00 00 00 	nop
+    10001858:	7f e3 fb 78 	mr      r3,r31
+    1000185c:	4b ff f5 41 	bl      10000d9c <0000005b.plt_call._Unwind_Resume@@GCC_3.0>
+    10001860:	e8 41 00 28 	ld      r2,40(r1)
+    10001864:	60 00 00 00 	nop
+    10001868:	3c 62 ff fe 	addis   r3,r2,-2
+    1000186c:	e9 22 80 30 	ld      r9,-32720(r2)
+    10001870:	38 63 73 98 	addi    r3,r3,29592
+    10001874:	38 80 00 01 	li      r4,1
+    10001878:	38 a0 00 0b 	li      r5,11
+    1000187c:	e8 c9 00 00 	ld      r6,0(r9)
+    10001880:	4b ff f3 79 	bl      10000bf8 <0000005b.plt_call.fwrite@@GLIBC_2.3>
+    10001884:	e8 41 00 28 	ld      r2,40(r1)
+    10001888:	4b ff f4 6d 	bl      10000cf4 <0000005b.plt_call.abort@@GLIBC_2.3>
+    1000188c:	e8 41 00 28 	ld      r2,40(r1)
+    10001890:	e9 21 00 78 	ld      r9,120(r1)
+    10001894:	7c 7f 1b 78 	mr      r31,r3
+    10001898:	2f a9 00 00 	cmpdi   cr7,r9,0
+    1000189c:	41 9e 00 10 	beq     cr7,100018ac <.main+0xaec>
+    100018a0:	7d 23 4b 78 	mr      r3,r9
+    100018a4:	48 00 0b 8d 	bl      10002430 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv>
+    100018a8:	60 00 00 00 	nop
+    100018ac:	7f e3 fb 78 	mr      r3,r31
+    100018b0:	4b ff fe 58 	b       10001708 <.main+0x948>
+    100018b4:	e9 21 00 80 	ld      r9,128(r1)
+    100018b8:	2f a9 00 00 	cmpdi   cr7,r9,0
+    100018bc:	41 9e fe 34 	beq     cr7,100016f0 <.main+0x930>
+    100018c0:	4b ff f3 71 	bl      10000c30 <0000005b.plt_call._ZSt9terminatev@@GLIBCXX_3.4>
+    100018c4:	e8 41 00 28 	ld      r2,40(r1)
+    100018c8:	e9 3f 00 00 	ld      r9,0(r31)
+    100018cc:	7f e3 fb 78 	mr      r3,r31
+    100018d0:	e9 29 00 10 	ld      r9,16(r9)
+    100018d4:	f8 41 00 28 	std     r2,40(r1)
+    100018d8:	e9 49 00 00 	ld      r10,0(r9)
+    100018dc:	e9 69 00 10 	ld      r11,16(r9)
+    100018e0:	7d 49 03 a6 	mtctr   r10
+    100018e4:	e8 49 00 08 	ld      r2,8(r9)
+    100018e8:	4e 80 04 21 	bctrl
+    100018ec:	e8 41 00 28 	ld      r2,40(r1)
+    100018f0:	7c 20 04 ac 	lwsync
+    100018f4:	39 1f 00 0c 	addi    r8,r31,12
+    100018f8:	7d 20 40 28 	lwarx   r9,0,r8
+    100018fc:	39 49 ff ff 	addi    r10,r9,-1
+    10001900:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10001904:	40 a2 ff f4 	bne     100018f8 <.main+0xb38>
+    10001908:	4c 00 01 2c 	isync
+    1000190c:	7d 29 07 b4 	extsw   r9,r9
+    10001910:	4b ff fb 8c 	b       1000149c <.main+0x6dc>
+    10001914:	60 00 00 00 	nop
+    10001918:	3c 62 ff fe 	addis   r3,r2,-2
+    1000191c:	e9 22 80 30 	ld      r9,-32720(r2)
+    10001920:	38 80 00 01 	li      r4,1
+    10001924:	38 a0 00 0e 	li      r5,14
+    10001928:	38 63 73 a8 	addi    r3,r3,29608
+    1000192c:	e8 c9 00 00 	ld      r6,0(r9)
+    10001930:	4b ff f2 c9 	bl      10000bf8 <0000005b.plt_call.fwrite@@GLIBC_2.3>
+    10001934:	e8 41 00 28 	ld      r2,40(r1)
+    10001938:	4b ff ff 50 	b       10001888 <.main+0xac8>
+    1000193c:	e9 3f 00 00 	ld      r9,0(r31)
+    10001940:	7f e3 fb 78 	mr      r3,r31
+    10001944:	e9 29 00 10 	ld      r9,16(r9)
+    10001948:	f8 41 00 28 	std     r2,40(r1)
+    1000194c:	e9 49 00 00 	ld      r10,0(r9)
+    10001950:	e9 69 00 10 	ld      r11,16(r9)
+    10001954:	7d 49 03 a6 	mtctr   r10
+    10001958:	e8 49 00 08 	ld      r2,8(r9)
+    1000195c:	4e 80 04 21 	bctrl
+    10001960:	e8 41 00 28 	ld      r2,40(r1)
+    10001964:	7c 20 04 ac 	lwsync
+    10001968:	39 1f 00 0c 	addi    r8,r31,12
+    1000196c:	7d 20 40 28 	lwarx   r9,0,r8
+    10001970:	39 49 ff ff 	addi    r10,r9,-1
+    10001974:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10001978:	40 a2 ff f4 	bne     1000196c <.main+0xbac>
+    1000197c:	4c 00 01 2c 	isync
+    10001980:	7d 29 07 b4 	extsw   r9,r9
+    10001984:	4b ff fc 18 	b       1000159c <.main+0x7dc>
+    10001988:	e9 21 00 78 	ld      r9,120(r1)
+    1000198c:	7c 7f 1b 78 	mr      r31,r3
+    10001990:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001994:	41 9e 00 10 	beq     cr7,100019a4 <.main+0xbe4>
+    10001998:	7d 23 4b 78 	mr      r3,r9
+    1000199c:	48 00 0a 95 	bl      10002430 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv>
+    100019a0:	60 00 00 00 	nop
+    100019a4:	7f e3 fb 78 	mr      r3,r31
+    100019a8:	4b ff fd 6c 	b       10001714 <.main+0x954>
+    100019ac:	4b ff fd 5c 	b       10001708 <.main+0x948>
+    100019b0:	7c 7e 1b 78 	mr      r30,r3
+    100019b4:	7f e3 fb 78 	mr      r3,r31
+    100019b8:	4b ff f3 ad 	bl      10000d64 <0000005b.plt_call._ZdlPv@@GLIBCXX_3.4>
+    100019bc:	e8 41 00 28 	ld      r2,40(r1)
+    100019c0:	7f c3 f3 78 	mr      r3,r30
+    100019c4:	4b ff fd 5c 	b       10001720 <.main+0x960>
+    100019c8:	00 00 00 00 	.long 0x0
+    100019cc:	00 09 02 01 	.long 0x90201
+    100019d0:	83 0e 00 00 	lwz     r24,0(r14)
+
+00000000100019d4 <._start>:
+    100019d4:	7c 29 0b 78 	mr      r9,r1
+    100019d8:	78 21 06 e4 	rldicr  r1,r1,0,59
+    100019dc:	38 00 00 00 	li      r0,0
+    100019e0:	f8 21 ff 81 	stdu    r1,-128(r1)
+    100019e4:	7c 08 03 a6 	mtlr    r0
+    100019e8:	f8 01 00 00 	std     r0,0(r1)
+    100019ec:	e9 02 80 10 	ld      r8,-32752(r2)
+    100019f0:	4b ff f2 24 	b       10000c14 <0000005b.plt_call.__libc_start_main@@GLIBC_2.3>
+    100019f4:	60 00 00 00 	nop
+    100019f8:	00 00 00 00 	.long 0x0
+    100019fc:	00 0c 20 40 	.long 0xc2040
+    10001a00:	00 00 00 00 	.long 0x0
+    10001a04:	00 00 00 24 	.long 0x24
+    10001a08:	00 06 5f 73 	.long 0x65f73
+    10001a0c:	74 61 72 74 	andis.  r1,r3,29300
+
+0000000010001a10 <.deregister_tm_clones>:
+    10001a10:	3d 22 ff ff 	addis   r9,r2,-1
+    10001a14:	3c 62 ff ff 	addis   r3,r2,-1
+    10001a18:	39 29 7d f7 	addi    r9,r9,32247
+    10001a1c:	38 63 7d f0 	addi    r3,r3,32240
+    10001a20:	7d 23 48 50 	subf    r9,r3,r9
+    10001a24:	2b a9 00 0e 	cmpldi  cr7,r9,14
+    10001a28:	4c 9d 00 20 	blelr   cr7
+    10001a2c:	60 00 00 00 	nop
+    10001a30:	e9 22 80 18 	ld      r9,-32744(r2)
+    10001a34:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001a38:	4d 9e 00 20 	beqlr   cr7
+    10001a3c:	7c 08 02 a6 	mflr    r0
+    10001a40:	f8 01 00 10 	std     r0,16(r1)
+    10001a44:	f8 21 ff 91 	stdu    r1,-112(r1)
+    10001a48:	f8 41 00 28 	std     r2,40(r1)
+    10001a4c:	e9 49 00 00 	ld      r10,0(r9)
+    10001a50:	e9 69 00 10 	ld      r11,16(r9)
+    10001a54:	7d 49 03 a6 	mtctr   r10
+    10001a58:	e8 49 00 08 	ld      r2,8(r9)
+    10001a5c:	4e 80 04 21 	bctrl
+    10001a60:	e8 41 00 28 	ld      r2,40(r1)
+    10001a64:	38 21 00 70 	addi    r1,r1,112
+    10001a68:	e8 01 00 10 	ld      r0,16(r1)
+    10001a6c:	7c 08 03 a6 	mtlr    r0
+    10001a70:	4e 80 00 20 	blr
+    10001a74:	60 00 00 00 	nop
+    10001a78:	60 00 00 00 	nop
+    10001a7c:	60 00 00 00 	nop
+
+0000000010001a80 <.register_tm_clones>:
+    10001a80:	3c 82 ff ff 	addis   r4,r2,-1
+    10001a84:	3c 62 ff ff 	addis   r3,r2,-1
+    10001a88:	38 84 7d f0 	addi    r4,r4,32240
+    10001a8c:	38 63 7d f0 	addi    r3,r3,32240
+    10001a90:	7c 83 20 50 	subf    r4,r3,r4
+    10001a94:	7c 84 1e 74 	sradi   r4,r4,3
+    10001a98:	7c 84 0e 74 	sradi   r4,r4,1
+    10001a9c:	7c 84 01 95 	addze.  r4,r4
+    10001aa0:	4d 82 00 20 	beqlr   
+    10001aa4:	60 00 00 00 	nop
+    10001aa8:	e9 42 80 20 	ld      r10,-32736(r2)
+    10001aac:	2f aa 00 00 	cmpdi   cr7,r10,0
+    10001ab0:	4d 9e 00 20 	beqlr   cr7
+    10001ab4:	7c 08 02 a6 	mflr    r0
+    10001ab8:	f8 01 00 10 	std     r0,16(r1)
+    10001abc:	f8 21 ff 91 	stdu    r1,-112(r1)
+    10001ac0:	f8 41 00 28 	std     r2,40(r1)
+    10001ac4:	e9 2a 00 00 	ld      r9,0(r10)
+    10001ac8:	e9 6a 00 10 	ld      r11,16(r10)
+    10001acc:	7d 29 03 a6 	mtctr   r9
+    10001ad0:	e8 4a 00 08 	ld      r2,8(r10)
+    10001ad4:	4e 80 04 21 	bctrl
+    10001ad8:	e8 41 00 28 	ld      r2,40(r1)
+    10001adc:	38 21 00 70 	addi    r1,r1,112
+    10001ae0:	e8 01 00 10 	ld      r0,16(r1)
+    10001ae4:	7c 08 03 a6 	mtlr    r0
+    10001ae8:	4e 80 00 20 	blr
+    10001aec:	60 00 00 00 	nop
+
+0000000010001af0 <.__do_global_dtors_aux>:
+    10001af0:	60 00 00 00 	nop
+    10001af4:	89 22 82 28 	lbz     r9,-32216(r2)
+    10001af8:	2f 89 00 00 	cmpwi   cr7,r9,0
+    10001afc:	4c 9e 00 20 	bnelr   cr7
+    10001b00:	7c 08 02 a6 	mflr    r0
+    10001b04:	f8 01 00 10 	std     r0,16(r1)
+    10001b08:	f8 21 ff 91 	stdu    r1,-112(r1)
+    10001b0c:	4b ff ff 05 	bl      10001a10 <.deregister_tm_clones>
+    10001b10:	38 21 00 70 	addi    r1,r1,112
+    10001b14:	39 20 00 01 	li      r9,1
+    10001b18:	e8 01 00 10 	ld      r0,16(r1)
+    10001b1c:	60 00 00 00 	nop
+    10001b20:	99 22 82 28 	stb     r9,-32216(r2)
+    10001b24:	7c 08 03 a6 	mtlr    r0
+    10001b28:	4e 80 00 20 	blr
+    10001b2c:	60 00 00 00 	nop
+
+0000000010001b30 <.frame_dummy>:
+    10001b30:	3d 22 ff ff 	addis   r9,r2,-1
+    10001b34:	39 29 7a b0 	addi    r9,r9,31408
+    10001b38:	7d 23 4b 78 	mr      r3,r9
+    10001b3c:	e9 23 00 00 	ld      r9,0(r3)
+    10001b40:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001b44:	40 9e 00 0c 	bne     cr7,10001b50 <.frame_dummy+0x20>
+    10001b48:	4b ff ff 38 	b       10001a80 <.register_tm_clones>
+    10001b4c:	60 00 00 00 	nop
+    10001b50:	60 00 00 00 	nop
+    10001b54:	e9 22 80 28 	ld      r9,-32728(r2)
+    10001b58:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001b5c:	41 9e ff ec 	beq     cr7,10001b48 <.frame_dummy+0x18>
+    10001b60:	7c 08 02 a6 	mflr    r0
+    10001b64:	f8 01 00 10 	std     r0,16(r1)
+    10001b68:	f8 21 ff 91 	stdu    r1,-112(r1)
+    10001b6c:	f8 41 00 28 	std     r2,40(r1)
+    10001b70:	e9 49 00 00 	ld      r10,0(r9)
+    10001b74:	e9 69 00 10 	ld      r11,16(r9)
+    10001b78:	7d 49 03 a6 	mtctr   r10
+    10001b7c:	e8 49 00 08 	ld      r2,8(r9)
+    10001b80:	4e 80 04 21 	bctrl
+    10001b84:	e8 41 00 28 	ld      r2,40(r1)
+    10001b88:	38 21 00 70 	addi    r1,r1,112
+    10001b8c:	e8 01 00 10 	ld      r0,16(r1)
+    10001b90:	7c 08 03 a6 	mtlr    r0
+    10001b94:	4b ff fe ec 	b       10001a80 <.register_tm_clones>
+    10001b98:	60 00 00 00 	nop
+    10001b9c:	60 00 00 00 	nop
+
+0000000010001ba0 <._ZL7producev>:
+    10001ba0:	60 00 00 00 	nop
+    10001ba4:	fb c1 ff f0 	std     r30,-16(r1)
+    10001ba8:	81 02 82 30 	lwz     r8,-32208(r2)
+    10001bac:	fb e1 ff f8 	std     r31,-8(r1)
+    10001bb0:	2f 88 00 00 	cmpwi   cr7,r8,0
+    10001bb4:	7d 08 07 b4 	extsw   r8,r8
+    10001bb8:	40 9d 00 d0 	ble     cr7,10001c88 <._ZL7producev+0xe8>
+    10001bbc:	60 00 00 00 	nop
+    10001bc0:	60 00 00 00 	nop
+    10001bc4:	e9 42 82 36 	lwa     r10,-32204(r2)
+    10001bc8:	3b c0 00 00 	li      r30,0
+    10001bcc:	39 62 82 30 	addi    r11,r2,-32208
+    10001bd0:	3b e0 00 ff 	li      r31,255
+    10001bd4:	38 00 00 01 	li      r0,1
+    10001bd8:	2f 8a 00 00 	cmpwi   cr7,r10,0
+    10001bdc:	38 60 00 04 	li      r3,4
+    10001be0:	39 80 00 01 	li      r12,1
+    10001be4:	40 9d 00 94 	ble     cr7,10001c78 <._ZL7producev+0xd8>
+    10001be8:	60 00 00 00 	nop
+    10001bec:	60 00 00 00 	nop
+    10001bf0:	e8 8b 00 08 	ld      r4,8(r11)
+    10001bf4:	39 04 00 18 	addi    r8,r4,24
+    10001bf8:	55 07 1e f8 	rlwinm  r7,r8,3,27,28
+    10001bfc:	79 08 07 64 	rldicr  r8,r8,0,61
+    10001c00:	68 e7 00 18 	xori    r7,r7,24
+    10001c04:	7f e5 38 30 	slw     r5,r31,r7
+    10001c08:	7c 06 38 30 	slw     r6,r0,r7
+    10001c0c:	60 00 00 00 	nop
+    10001c10:	7d 20 40 28 	lwarx   r9,0,r8
+    10001c14:	7d 2a 28 78 	andc    r10,r9,r5
+    10001c18:	7d 4a 33 78 	or      r10,r10,r6
+    10001c1c:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10001c20:	40 a2 ff f0 	bne     10001c10 <._ZL7producev+0x70>
+    10001c24:	4c 00 01 2c 	isync
+    10001c28:	7d 29 3c 30 	srw     r9,r9,r7
+    10001c2c:	79 2a 06 21 	clrldi. r10,r9,56
+    10001c30:	40 82 ff e0 	bne     10001c10 <._ZL7producev+0x70>
+    10001c34:	e8 e4 00 00 	ld      r7,0(r4)
+    10001c38:	e9 24 00 10 	ld      r9,16(r4)
+    10001c3c:	7d 07 18 2e 	lwzx    r8,r7,r3
+    10001c40:	39 29 00 01 	addi    r9,r9,1
+    10001c44:	39 08 00 01 	addi    r8,r8,1
+    10001c48:	7d 07 19 2e 	stwx    r8,r7,r3
+    10001c4c:	f9 24 00 10 	std     r9,16(r4)
+    10001c50:	39 2c 00 01 	addi    r9,r12,1
+    10001c54:	38 63 00 04 	addi    r3,r3,4
+    10001c58:	7d 2c 07 b4 	extsw   r12,r9
+    10001c5c:	7c 20 04 ac 	lwsync
+    10001c60:	99 44 00 18 	stb     r10,24(r4)
+    10001c64:	81 4b 00 04 	lwz     r10,4(r11)
+    10001c68:	7f 8a 48 00 	cmpw    cr7,r10,r9
+    10001c6c:	7d 4a 07 b4 	extsw   r10,r10
+    10001c70:	40 9c ff 80 	bge     cr7,10001bf0 <._ZL7producev+0x50>
+    10001c74:	e9 0b 00 02 	lwa     r8,0(r11)
+    10001c78:	39 3e 00 01 	addi    r9,r30,1
+    10001c7c:	7f 89 40 00 	cmpw    cr7,r9,r8
+    10001c80:	7d 3e 07 b4 	extsw   r30,r9
+    10001c84:	41 9c ff 54 	blt     cr7,10001bd8 <._ZL7producev+0x38>
+    10001c88:	60 00 00 00 	nop
+    10001c8c:	38 a0 00 ff 	li      r5,255
+    10001c90:	e8 82 82 38 	ld      r4,-32200(r2)
+    10001c94:	38 c0 00 01 	li      r6,1
+    10001c98:	39 04 00 18 	addi    r8,r4,24
+    10001c9c:	55 07 1e f8 	rlwinm  r7,r8,3,27,28
+    10001ca0:	79 08 07 64 	rldicr  r8,r8,0,61
+    10001ca4:	68 e7 00 18 	xori    r7,r7,24
+    10001ca8:	7c a5 38 30 	slw     r5,r5,r7
+    10001cac:	7c c6 38 30 	slw     r6,r6,r7
+    10001cb0:	7d 20 40 28 	lwarx   r9,0,r8
+    10001cb4:	7d 2a 28 78 	andc    r10,r9,r5
+    10001cb8:	7d 4a 33 78 	or      r10,r10,r6
+    10001cbc:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10001cc0:	40 a2 ff f0 	bne     10001cb0 <._ZL7producev+0x110>
+    10001cc4:	4c 00 01 2c 	isync
+    10001cc8:	7d 29 3c 30 	srw     r9,r9,r7
+    10001ccc:	79 2a 06 21 	clrldi. r10,r9,56
+    10001cd0:	40 82 ff e0 	bne     10001cb0 <._ZL7producev+0x110>
+    10001cd4:	e8 e4 00 00 	ld      r7,0(r4)
+    10001cd8:	e9 24 00 10 	ld      r9,16(r4)
+    10001cdc:	81 07 00 00 	lwz     r8,0(r7)
+    10001ce0:	39 29 00 01 	addi    r9,r9,1
+    10001ce4:	39 08 00 01 	addi    r8,r8,1
+    10001ce8:	91 07 00 00 	stw     r8,0(r7)
+    10001cec:	f9 24 00 10 	std     r9,16(r4)
+    10001cf0:	7c 20 04 ac 	lwsync
+    10001cf4:	99 44 00 18 	stb     r10,24(r4)
+    10001cf8:	eb c1 ff f0 	ld      r30,-16(r1)
+    10001cfc:	eb e1 ff f8 	ld      r31,-8(r1)
+    10001d00:	4e 80 00 20 	blr
+    10001d04:	00 00 00 00 	.long 0x0
+    10001d08:	00 09 00 00 	.long 0x90000
+    10001d0c:	00 02 00 00 	.long 0x20000
+
+0000000010001d10 <._ZL7consumev>:
+    10001d10:	7c 08 02 a6 	mflr    r0
+    10001d14:	fa c1 ff b0 	std     r22,-80(r1)
+    10001d18:	fa e1 ff b8 	std     r23,-72(r1)
+    10001d1c:	fb 01 ff c0 	std     r24,-64(r1)
+    10001d20:	fb 21 ff c8 	std     r25,-56(r1)
+    10001d24:	fb 41 ff d0 	std     r26,-48(r1)
+    10001d28:	fb 61 ff d8 	std     r27,-40(r1)
+    10001d2c:	fb 81 ff e0 	std     r28,-32(r1)
+    10001d30:	fb a1 ff e8 	std     r29,-24(r1)
+    10001d34:	fb c1 ff f0 	std     r30,-16(r1)
+    10001d38:	f8 01 00 10 	std     r0,16(r1)
+    10001d3c:	fb e1 ff f8 	std     r31,-8(r1)
+    10001d40:	f8 21 ff 41 	stdu    r1,-192(r1)
+    10001d44:	60 00 00 00 	nop
+    10001d48:	3b 22 82 30 	addi    r25,r2,-32208
+    10001d4c:	3a e0 00 ff 	li      r23,255
+    10001d50:	3b 00 00 01 	li      r24,1
+    10001d54:	3a c0 00 00 	li      r22,0
+    10001d58:	eb 79 00 08 	ld      r27,8(r25)
+    10001d5c:	3b 5b 00 18 	addi    r26,r27,24
+    10001d60:	57 5e 1e f8 	rlwinm  r30,r26,3,27,28
+    10001d64:	7b 5f 07 64 	rldicr  r31,r26,0,61
+    10001d68:	6b c8 00 18 	xori    r8,r30,24
+    10001d6c:	7e e6 40 30 	slw     r6,r23,r8
+    10001d70:	7f 07 40 30 	slw     r7,r24,r8
+    10001d74:	60 00 00 00 	nop
+    10001d78:	60 00 00 00 	nop
+    10001d7c:	60 00 00 00 	nop
+    10001d80:	7d 20 f8 28 	lwarx   r9,0,r31
+    10001d84:	7d 2a 30 78 	andc    r10,r9,r6
+    10001d88:	7d 4a 3b 78 	or      r10,r10,r7
+    10001d8c:	7d 40 f9 2d 	stwcx.  r10,0,r31
+    10001d90:	40 a2 ff f0 	bne     10001d80 <._ZL7consumev+0x70>
+    10001d94:	4c 00 01 2c 	isync
+    10001d98:	7d 29 44 30 	srw     r9,r9,r8
+    10001d9c:	79 29 06 20 	clrldi  r9,r9,56
+    10001da0:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001da4:	40 9e ff dc 	bne     cr7,10001d80 <._ZL7consumev+0x70>
+    10001da8:	e9 1b 00 10 	ld      r8,16(r27)
+    10001dac:	6b de 00 18 	xori    r30,r30,24
+    10001db0:	7e fc f0 30 	slw     r28,r23,r30
+    10001db4:	7f 1d f0 30 	slw     r29,r24,r30
+    10001db8:	2f a8 00 00 	cmpdi   cr7,r8,0
+    10001dbc:	40 9e 00 48 	bne     cr7,10001e04 <._ZL7consumev+0xf4>
+    10001dc0:	7c 20 04 ac 	lwsync
+    10001dc4:	99 1a 00 00 	stb     r8,0(r26)
+    10001dc8:	4b ff ef 11 	bl      10000cd8 <0000005b.plt_call.sched_yield@@GLIBC_2.3>
+    10001dcc:	e8 41 00 28 	ld      r2,40(r1)
+    10001dd0:	7d 20 f8 28 	lwarx   r9,0,r31
+    10001dd4:	7d 2a e0 78 	andc    r10,r9,r28
+    10001dd8:	7d 4a eb 78 	or      r10,r10,r29
+    10001ddc:	7d 40 f9 2d 	stwcx.  r10,0,r31
+    10001de0:	40 a2 ff f0 	bne     10001dd0 <._ZL7consumev+0xc0>
+    10001de4:	4c 00 01 2c 	isync
+    10001de8:	7d 29 f4 30 	srw     r9,r9,r30
+    10001dec:	79 29 06 20 	clrldi  r9,r9,56
+    10001df0:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10001df4:	40 9e ff dc 	bne     cr7,10001dd0 <._ZL7consumev+0xc0>
+    10001df8:	e9 1b 00 10 	ld      r8,16(r27)
+    10001dfc:	2f a8 00 00 	cmpdi   cr7,r8,0
+    10001e00:	41 9e ff c0 	beq     cr7,10001dc0 <._ZL7consumev+0xb0>
+    10001e04:	e8 bb 00 08 	ld      r5,8(r27)
+    10001e08:	e8 9b 00 00 	ld      r4,0(r27)
+    10001e0c:	2f a5 00 00 	cmpdi   cr7,r5,0
+    10001e10:	41 9e 00 40 	beq     cr7,10001e50 <._ZL7consumev+0x140>
+    10001e14:	81 24 00 04 	lwz     r9,4(r4)
+    10001e18:	2f 89 00 00 	cmpwi   cr7,r9,0
+    10001e1c:	41 9d 00 f0 	bgt     cr7,10001f0c <._ZL7consumev+0x1fc>
+    10001e20:	38 e4 00 04 	addi    r7,r4,4
+    10001e24:	39 20 00 02 	li      r9,2
+    10001e28:	48 00 00 20 	b       10001e48 <._ZL7consumev+0x138>
+    10001e2c:	60 00 00 00 	nop
+    10001e30:	85 47 00 04 	lwzu    r10,4(r7)
+    10001e34:	38 c9 00 01 	addi    r6,r9,1
+    10001e38:	2f 8a 00 00 	cmpwi   cr7,r10,0
+    10001e3c:	7d 4a 07 b4 	extsw   r10,r10
+    10001e40:	41 9d 00 60 	bgt     cr7,10001ea0 <._ZL7consumev+0x190>
+    10001e44:	7c c9 33 78 	mr      r9,r6
+    10001e48:	7f a9 28 40 	cmpld   cr7,r9,r5
+    10001e4c:	40 9d ff e4 	ble     cr7,10001e30 <._ZL7consumev+0x120>
+    10001e50:	81 24 00 00 	lwz     r9,0(r4)
+    10001e54:	2f 89 00 00 	cmpwi   cr7,r9,0
+    10001e58:	41 9e 00 d4 	beq     cr7,10001f2c <._ZL7consumev+0x21c>
+    10001e5c:	7c 20 04 ac 	lwsync
+    10001e60:	39 20 00 00 	li      r9,0
+    10001e64:	38 21 00 c0 	addi    r1,r1,192
+    10001e68:	99 3a 00 00 	stb     r9,0(r26)
+    10001e6c:	e8 01 00 10 	ld      r0,16(r1)
+    10001e70:	ea c1 ff b0 	ld      r22,-80(r1)
+    10001e74:	ea e1 ff b8 	ld      r23,-72(r1)
+    10001e78:	eb 01 ff c0 	ld      r24,-64(r1)
+    10001e7c:	7c 08 03 a6 	mtlr    r0
+    10001e80:	eb 21 ff c8 	ld      r25,-56(r1)
+    10001e84:	eb 41 ff d0 	ld      r26,-48(r1)
+    10001e88:	eb 61 ff d8 	ld      r27,-40(r1)
+    10001e8c:	eb 81 ff e0 	ld      r28,-32(r1)
+    10001e90:	eb a1 ff e8 	ld      r29,-24(r1)
+    10001e94:	eb c1 ff f0 	ld      r30,-16(r1)
+    10001e98:	eb e1 ff f8 	ld      r31,-8(r1)
+    10001e9c:	4e 80 00 20 	blr
+    10001ea0:	39 4a ff ff 	addi    r10,r10,-1
+    10001ea4:	39 08 ff ff 	addi    r8,r8,-1
+    10001ea8:	91 47 00 00 	stw     r10,0(r7)
+    10001eac:	f9 1b 00 10 	std     r8,16(r27)
+    10001eb0:	2b a9 00 01 	cmpldi  cr7,r9,1
+    10001eb4:	39 09 ff ff 	addi    r8,r9,-1
+    10001eb8:	7d 09 03 a6 	mtctr   r8
+    10001ebc:	39 40 00 01 	li      r10,1
+    10001ec0:	7c 20 04 ac 	lwsync
+    10001ec4:	9a db 00 18 	stb     r22,24(r27)
+    10001ec8:	41 9e 00 14 	beq     cr7,10001edc <._ZL7consumev+0x1cc>
+    10001ecc:	60 00 00 00 	nop
+    10001ed0:	7d 4a 49 d2 	mulld   r10,r10,r9
+    10001ed4:	39 29 ff ff 	addi    r9,r9,-1
+    10001ed8:	42 00 ff f8 	bdnz    10001ed0 <._ZL7consumev+0x1c0>
+    10001edc:	81 39 00 10 	lwz     r9,16(r25)
+    10001ee0:	39 19 00 18 	addi    r8,r25,24
+    10001ee4:	69 29 04 d2 	xori    r9,r9,1234
+    10001ee8:	91 39 00 10 	stw     r9,16(r25)
+    10001eec:	7d 20 40 a8 	ldarx   r9,0,r8
+    10001ef0:	7d 29 52 14 	add     r9,r9,r10
+    10001ef4:	7d 20 41 ad 	stdcx.  r9,0,r8
+    10001ef8:	40 a2 ff f4 	bne     10001eec <._ZL7consumev+0x1dc>
+    10001efc:	81 39 00 10 	lwz     r9,16(r25)
+    10001f00:	69 29 16 2e 	xori    r9,r9,5678
+    10001f04:	91 39 00 10 	stw     r9,16(r25)
+    10001f08:	4b ff fe 50 	b       10001d58 <._ZL7consumev+0x48>
+    10001f0c:	39 29 ff ff 	addi    r9,r9,-1
+    10001f10:	39 08 ff ff 	addi    r8,r8,-1
+    10001f14:	91 24 00 04 	stw     r9,4(r4)
+    10001f18:	f9 1b 00 10 	std     r8,16(r27)
+    10001f1c:	39 40 00 01 	li      r10,1
+    10001f20:	7c 20 04 ac 	lwsync
+    10001f24:	9a db 00 18 	stb     r22,24(r27)
+    10001f28:	4b ff ff b4 	b       10001edc <._ZL7consumev+0x1cc>
+    10001f2c:	60 00 00 00 	nop
+    10001f30:	3c 82 ff fe 	addis   r4,r2,-2
+    10001f34:	e9 22 80 30 	ld      r9,-32720(r2)
+    10001f38:	38 84 73 50 	addi    r4,r4,29520
+    10001f3c:	38 a0 00 5d 	li      r5,93
+    10001f40:	e8 69 00 00 	ld      r3,0(r9)
+    10001f44:	4b ff ee 05 	bl      10000d48 <0000005b.plt_call.fprintf@@GLIBC_2.4>
+    10001f48:	e8 41 00 28 	ld      r2,40(r1)
+    10001f4c:	4b ff ed a9 	bl      10000cf4 <0000005b.plt_call.abort@@GLIBC_2.3>
+    10001f50:	e8 41 00 28 	ld      r2,40(r1)
+    10001f54:	00 00 00 00 	.long 0x0
+    10001f58:	00 09 00 01 	.long 0x90001
+    10001f5c:	80 0a 00 00 	lwz     r0,0(r10)
+
+0000000010001f60 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv>:
+    10001f60:	7c 69 1b 79 	mr.     r9,r3
+    10001f64:	4d 82 00 20 	beqlr   
+    10001f68:	7c 08 02 a6 	mflr    r0
+    10001f6c:	f8 01 00 10 	std     r0,16(r1)
+    10001f70:	f8 21 ff 91 	stdu    r1,-112(r1)
+    10001f74:	e9 29 00 00 	ld      r9,0(r9)
+    10001f78:	e9 29 00 08 	ld      r9,8(r9)
+    10001f7c:	f8 41 00 28 	std     r2,40(r1)
+    10001f80:	e9 49 00 00 	ld      r10,0(r9)
+    10001f84:	e9 69 00 10 	ld      r11,16(r9)
+    10001f88:	7d 49 03 a6 	mtctr   r10
+    10001f8c:	e8 49 00 08 	ld      r2,8(r9)
+    10001f90:	4e 80 04 21 	bctrl
+    10001f94:	e8 41 00 28 	ld      r2,40(r1)
+    10001f98:	38 21 00 70 	addi    r1,r1,112
+    10001f9c:	e8 01 00 10 	ld      r0,16(r1)
+    10001fa0:	7c 08 03 a6 	mtlr    r0
+    10001fa4:	4e 80 00 20 	blr
+    10001fa8:	00 00 00 00 	.long 0x0
+    10001fac:	00 09 00 01 	.long 0x90001
+    10001fb0:	80 00 00 00 	lwz     r0,0(0)
+    10001fb4:	60 00 00 00 	nop
+    10001fb8:	60 00 00 00 	nop
+    10001fbc:	60 00 00 00 	nop
+
+0000000010001fc0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EED1Ev>:
+    10001fc0:	4e 80 00 20 	blr
+    10001fc4:	00 00 00 00 	.long 0x0
+    10001fc8:	00 09 00 00 	.long 0x90000
+    10001fcc:	00 00 00 00 	.long 0x0
+
+0000000010001fd0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE10_M_disposeEv>:
+    10001fd0:	7c 08 02 a6 	mflr    r0
+    10001fd4:	38 63 00 10 	addi    r3,r3,16
+    10001fd8:	f8 01 00 10 	std     r0,16(r1)
+    10001fdc:	f8 21 ff 91 	stdu    r1,-112(r1)
+    10001fe0:	e9 23 00 00 	ld      r9,0(r3)
+    10001fe4:	e9 29 00 00 	ld      r9,0(r9)
+    10001fe8:	f8 41 00 28 	std     r2,40(r1)
+    10001fec:	e9 49 00 00 	ld      r10,0(r9)
+    10001ff0:	e9 69 00 10 	ld      r11,16(r9)
+    10001ff4:	7d 49 03 a6 	mtctr   r10
+    10001ff8:	e8 49 00 08 	ld      r2,8(r9)
+    10001ffc:	4e 80 04 21 	bctrl
+    10002000:	e8 41 00 28 	ld      r2,40(r1)
+    10002004:	38 21 00 70 	addi    r1,r1,112
+    10002008:	e8 01 00 10 	ld      r0,16(r1)
+    1000200c:	7c 08 03 a6 	mtlr    r0
+    10002010:	4e 80 00 20 	blr
+    10002014:	00 00 00 00 	.long 0x0
+    10002018:	00 09 00 01 	.long 0x90001
+    1000201c:	80 00 00 00 	lwz     r0,0(0)
+
+0000000010002020 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEE6_M_runEv>:
+    10002020:	7c 08 02 a6 	mflr    r0
+    10002024:	f8 01 00 10 	std     r0,16(r1)
+    10002028:	f8 21 ff 91 	stdu    r1,-112(r1)
+    1000202c:	e9 23 00 18 	ld      r9,24(r3)
+    10002030:	f8 41 00 28 	std     r2,40(r1)
+    10002034:	e9 49 00 00 	ld      r10,0(r9)
+    10002038:	e9 69 00 10 	ld      r11,16(r9)
+    1000203c:	7d 49 03 a6 	mtctr   r10
+    10002040:	e8 49 00 08 	ld      r2,8(r9)
+    10002044:	4e 80 04 21 	bctrl
+    10002048:	e8 41 00 28 	ld      r2,40(r1)
+    1000204c:	38 21 00 70 	addi    r1,r1,112
+    10002050:	e8 01 00 10 	ld      r0,16(r1)
+    10002054:	7c 08 03 a6 	mtlr    r0
+    10002058:	4e 80 00 20 	blr
+    1000205c:	00 00 00 00 	.long 0x0
+    10002060:	00 09 00 01 	.long 0x90001
+    10002064:	80 00 00 00 	lwz     r0,0(0)
+    10002068:	60 00 00 00 	nop
+    1000206c:	60 00 00 00 	nop
+
+0000000010002070 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EED0Ev>:
+    10002070:	7c 08 02 a6 	mflr    r0
+    10002074:	f8 01 00 10 	std     r0,16(r1)
+    10002078:	f8 21 ff 91 	stdu    r1,-112(r1)
+    1000207c:	4b ff ec e9 	bl      10000d64 <0000005b.plt_call._ZdlPv@@GLIBCXX_3.4>
+    10002080:	e8 41 00 28 	ld      r2,40(r1)
+    10002084:	38 21 00 70 	addi    r1,r1,112
+    10002088:	e8 01 00 10 	ld      r0,16(r1)
+    1000208c:	7c 08 03 a6 	mtlr    r0
+    10002090:	4e 80 00 20 	blr
+    10002094:	00 00 00 00 	.long 0x0
+    10002098:	00 09 00 01 	.long 0x90001
+    1000209c:	80 00 00 00 	lwz     r0,0(0)
+
+00000000100020a0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE10_M_destroyEv>:
+    100020a0:	7c 08 02 a6 	mflr    r0
+    100020a4:	f8 01 00 10 	std     r0,16(r1)
+    100020a8:	f8 21 ff 91 	stdu    r1,-112(r1)
+    100020ac:	4b ff ec b9 	bl      10000d64 <0000005b.plt_call._ZdlPv@@GLIBCXX_3.4>
+    100020b0:	e8 41 00 28 	ld      r2,40(r1)
+    100020b4:	38 21 00 70 	addi    r1,r1,112
+    100020b8:	e8 01 00 10 	ld      r0,16(r1)
+    100020bc:	7c 08 03 a6 	mtlr    r0
+    100020c0:	4e 80 00 20 	blr
+    100020c4:	00 00 00 00 	.long 0x0
+    100020c8:	00 09 00 01 	.long 0x90001
+    100020cc:	80 00 00 00 	lwz     r0,0(0)
+
+00000000100020d0 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info>:
+    100020d0:	7c 08 02 a6 	mflr    r0
+    100020d4:	3d 22 ff fe 	addis   r9,r2,-2
+    100020d8:	fb c1 ff f0 	std     r30,-16(r1)
+    100020dc:	fb e1 ff f8 	std     r31,-8(r1)
+    100020e0:	7c 7e 1b 78 	mr      r30,r3
+    100020e4:	f8 01 00 10 	std     r0,16(r1)
+    100020e8:	f8 21 ff 81 	stdu    r1,-128(r1)
+    100020ec:	e9 44 00 08 	ld      r10,8(r4)
+    100020f0:	38 89 72 c0 	addi    r4,r9,29376
+    100020f4:	7f aa 20 00 	cmpd    cr7,r10,r4
+    100020f8:	41 9e 00 48 	beq     cr7,10002140 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info+0x70>
+    100020fc:	89 2a 00 00 	lbz     r9,0(r10)
+    10002100:	3b e0 00 00 	li      r31,0
+    10002104:	2f 89 00 2a 	cmpwi   cr7,r9,42
+    10002108:	41 9e 00 18 	beq     cr7,10002120 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info+0x50>
+    1000210c:	7d 43 53 78 	mr      r3,r10
+    10002110:	4b ff eb 3d 	bl      10000c4c <0000005b.plt_call.strcmp@@GLIBC_2.3>
+    10002114:	e8 41 00 28 	ld      r2,40(r1)
+    10002118:	2f a3 00 00 	cmpdi   cr7,r3,0
+    1000211c:	41 9e 00 24 	beq     cr7,10002140 <._ZNSt23_Sp_counted_ptr_inplaceINSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEEESaIS7_ELN9__gnu_cxx12_Lock_policyE2EE14_M_get_deleterERKSt9type_info+0x70>
+    10002120:	38 21 00 80 	addi    r1,r1,128
+    10002124:	7f e3 fb 78 	mr      r3,r31
+    10002128:	e8 01 00 10 	ld      r0,16(r1)
+    1000212c:	eb c1 ff f0 	ld      r30,-16(r1)
+    10002130:	eb e1 ff f8 	ld      r31,-8(r1)
+    10002134:	7c 08 03 a6 	mtlr    r0
+    10002138:	4e 80 00 20 	blr
+    1000213c:	60 00 00 00 	nop
+    10002140:	38 21 00 80 	addi    r1,r1,128
+    10002144:	3b fe 00 10 	addi    r31,r30,16
+    10002148:	e8 01 00 10 	ld      r0,16(r1)
+    1000214c:	7f e3 fb 78 	mr      r3,r31
+    10002150:	eb c1 ff f0 	ld      r30,-16(r1)
+    10002154:	eb e1 ff f8 	ld      r31,-8(r1)
+    10002158:	7c 08 03 a6 	mtlr    r0
+    1000215c:	4e 80 00 20 	blr
+    10002160:	00 00 00 00 	.long 0x0
+    10002164:	00 09 00 01 	.long 0x90001
+    10002168:	80 02 00 00 	lwz     r0,0(r2)
+    1000216c:	60 00 00 00 	nop
+
+0000000010002170 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev>:
+    10002170:	7c 08 02 a6 	mflr    r0
+    10002174:	fb e1 ff f8 	std     r31,-8(r1)
+    10002178:	3d 42 ff ff 	addis   r10,r2,-1
+    1000217c:	39 2a 7b 40 	addi    r9,r10,31552
+    10002180:	f8 01 00 10 	std     r0,16(r1)
+    10002184:	f8 21 ff 81 	stdu    r1,-128(r1)
+    10002188:	f9 23 00 00 	std     r9,0(r3)
+    1000218c:	eb e3 00 10 	ld      r31,16(r3)
+    10002190:	2f bf 00 00 	cmpdi   cr7,r31,0
+    10002194:	41 9e 00 38 	beq     cr7,100021cc <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0x5c>
+    10002198:	60 00 00 00 	nop
+    1000219c:	e9 22 80 38 	ld      r9,-32712(r2)
+    100021a0:	2f a9 00 00 	cmpdi   cr7,r9,0
+    100021a4:	41 9e 00 3c 	beq     cr7,100021e0 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0x70>
+    100021a8:	7c 20 04 ac 	lwsync
+    100021ac:	39 1f 00 08 	addi    r8,r31,8
+    100021b0:	7d 20 40 28 	lwarx   r9,0,r8
+    100021b4:	39 49 ff ff 	addi    r10,r9,-1
+    100021b8:	7d 40 41 2d 	stwcx.  r10,0,r8
+    100021bc:	40 a2 ff f4 	bne     100021b0 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0x40>
+    100021c0:	4c 00 01 2c 	isync
+    100021c4:	2b 89 00 01 	cmplwi  cr7,r9,1
+    100021c8:	41 9e 00 68 	beq     cr7,10002230 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0xc0>
+    100021cc:	38 21 00 80 	addi    r1,r1,128
+    100021d0:	e8 01 00 10 	ld      r0,16(r1)
+    100021d4:	eb e1 ff f8 	ld      r31,-8(r1)
+    100021d8:	7c 08 03 a6 	mtlr    r0
+    100021dc:	4e 80 00 20 	blr
+    100021e0:	81 3f 00 08 	lwz     r9,8(r31)
+    100021e4:	2f 89 00 01 	cmpwi   cr7,r9,1
+    100021e8:	39 29 ff ff 	addi    r9,r9,-1
+    100021ec:	91 3f 00 08 	stw     r9,8(r31)
+    100021f0:	40 9e ff dc 	bne     cr7,100021cc <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0x5c>
+    100021f4:	e9 3f 00 00 	ld      r9,0(r31)
+    100021f8:	7f e3 fb 78 	mr      r3,r31
+    100021fc:	e9 29 00 10 	ld      r9,16(r9)
+    10002200:	f8 41 00 28 	std     r2,40(r1)
+    10002204:	e9 49 00 00 	ld      r10,0(r9)
+    10002208:	e9 69 00 10 	ld      r11,16(r9)
+    1000220c:	7d 49 03 a6 	mtctr   r10
+    10002210:	e8 49 00 08 	ld      r2,8(r9)
+    10002214:	4e 80 04 21 	bctrl
+    10002218:	e8 41 00 28 	ld      r2,40(r1)
+    1000221c:	81 3f 00 0c 	lwz     r9,12(r31)
+    10002220:	39 49 ff ff 	addi    r10,r9,-1
+    10002224:	7d 29 07 b4 	extsw   r9,r9
+    10002228:	91 5f 00 0c 	stw     r10,12(r31)
+    1000222c:	48 00 00 4c 	b       10002278 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0x108>
+    10002230:	e9 3f 00 00 	ld      r9,0(r31)
+    10002234:	7f e3 fb 78 	mr      r3,r31
+    10002238:	e9 29 00 10 	ld      r9,16(r9)
+    1000223c:	f8 41 00 28 	std     r2,40(r1)
+    10002240:	e9 49 00 00 	ld      r10,0(r9)
+    10002244:	e9 69 00 10 	ld      r11,16(r9)
+    10002248:	7d 49 03 a6 	mtctr   r10
+    1000224c:	e8 49 00 08 	ld      r2,8(r9)
+    10002250:	4e 80 04 21 	bctrl
+    10002254:	e8 41 00 28 	ld      r2,40(r1)
+    10002258:	7c 20 04 ac 	lwsync
+    1000225c:	39 1f 00 0c 	addi    r8,r31,12
+    10002260:	7d 20 40 28 	lwarx   r9,0,r8
+    10002264:	39 49 ff ff 	addi    r10,r9,-1
+    10002268:	7d 40 41 2d 	stwcx.  r10,0,r8
+    1000226c:	40 a2 ff f4 	bne     10002260 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0xf0>
+    10002270:	4c 00 01 2c 	isync
+    10002274:	7d 29 07 b4 	extsw   r9,r9
+    10002278:	2f 89 00 01 	cmpwi   cr7,r9,1
+    1000227c:	40 9e ff 50 	bne     cr7,100021cc <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0x5c>
+    10002280:	e9 3f 00 00 	ld      r9,0(r31)
+    10002284:	7f e3 fb 78 	mr      r3,r31
+    10002288:	e9 29 00 18 	ld      r9,24(r9)
+    1000228c:	f8 41 00 28 	std     r2,40(r1)
+    10002290:	e9 49 00 00 	ld      r10,0(r9)
+    10002294:	e9 69 00 10 	ld      r11,16(r9)
+    10002298:	7d 49 03 a6 	mtctr   r10
+    1000229c:	e8 49 00 08 	ld      r2,8(r9)
+    100022a0:	4e 80 04 21 	bctrl
+    100022a4:	e8 41 00 28 	ld      r2,40(r1)
+    100022a8:	4b ff ff 24 	b       100021cc <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED2Ev+0x5c>
+    100022ac:	00 00 00 00 	.long 0x0
+    100022b0:	00 09 00 01 	.long 0x90001
+    100022b4:	80 01 00 00 	lwz     r0,0(r1)
+    100022b8:	60 00 00 00 	nop
+    100022bc:	60 00 00 00 	nop
+
+00000000100022c0 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev>:
+    100022c0:	7c 08 02 a6 	mflr    r0
+    100022c4:	fb c1 ff f0 	std     r30,-16(r1)
+    100022c8:	3d 42 ff ff 	addis   r10,r2,-1
+    100022cc:	fb e1 ff f8 	std     r31,-8(r1)
+    100022d0:	39 2a 7b 40 	addi    r9,r10,31552
+    100022d4:	7c 7f 1b 78 	mr      r31,r3
+    100022d8:	f8 01 00 10 	std     r0,16(r1)
+    100022dc:	f8 21 ff 81 	stdu    r1,-128(r1)
+    100022e0:	f9 23 00 00 	std     r9,0(r3)
+    100022e4:	eb c3 00 10 	ld      r30,16(r3)
+    100022e8:	2f be 00 00 	cmpdi   cr7,r30,0
+    100022ec:	41 9e 00 38 	beq     cr7,10002324 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0x64>
+    100022f0:	60 00 00 00 	nop
+    100022f4:	e9 22 80 38 	ld      r9,-32712(r2)
+    100022f8:	2f a9 00 00 	cmpdi   cr7,r9,0
+    100022fc:	41 9e 00 54 	beq     cr7,10002350 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0x90>
+    10002300:	7c 20 04 ac 	lwsync
+    10002304:	39 1e 00 08 	addi    r8,r30,8
+    10002308:	7d 20 40 28 	lwarx   r9,0,r8
+    1000230c:	39 49 ff ff 	addi    r10,r9,-1
+    10002310:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10002314:	40 a2 ff f4 	bne     10002308 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0x48>
+    10002318:	4c 00 01 2c 	isync
+    1000231c:	2b 89 00 01 	cmplwi  cr7,r9,1
+    10002320:	41 9e 00 80 	beq     cr7,100023a0 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0xe0>
+    10002324:	7f e3 fb 78 	mr      r3,r31
+    10002328:	4b ff ea 3d 	bl      10000d64 <0000005b.plt_call._ZdlPv@@GLIBCXX_3.4>
+    1000232c:	e8 41 00 28 	ld      r2,40(r1)
+    10002330:	38 21 00 80 	addi    r1,r1,128
+    10002334:	e8 01 00 10 	ld      r0,16(r1)
+    10002338:	eb c1 ff f0 	ld      r30,-16(r1)
+    1000233c:	eb e1 ff f8 	ld      r31,-8(r1)
+    10002340:	7c 08 03 a6 	mtlr    r0
+    10002344:	4e 80 00 20 	blr
+    10002348:	60 00 00 00 	nop
+    1000234c:	60 00 00 00 	nop
+    10002350:	81 3e 00 08 	lwz     r9,8(r30)
+    10002354:	2f 89 00 01 	cmpwi   cr7,r9,1
+    10002358:	39 29 ff ff 	addi    r9,r9,-1
+    1000235c:	91 3e 00 08 	stw     r9,8(r30)
+    10002360:	40 9e ff c4 	bne     cr7,10002324 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0x64>
+    10002364:	e9 3e 00 00 	ld      r9,0(r30)
+    10002368:	7f c3 f3 78 	mr      r3,r30
+    1000236c:	e9 29 00 10 	ld      r9,16(r9)
+    10002370:	f8 41 00 28 	std     r2,40(r1)
+    10002374:	e9 49 00 00 	ld      r10,0(r9)
+    10002378:	e9 69 00 10 	ld      r11,16(r9)
+    1000237c:	7d 49 03 a6 	mtctr   r10
+    10002380:	e8 49 00 08 	ld      r2,8(r9)
+    10002384:	4e 80 04 21 	bctrl
+    10002388:	e8 41 00 28 	ld      r2,40(r1)
+    1000238c:	81 3e 00 0c 	lwz     r9,12(r30)
+    10002390:	39 49 ff ff 	addi    r10,r9,-1
+    10002394:	7d 29 07 b4 	extsw   r9,r9
+    10002398:	91 5e 00 0c 	stw     r10,12(r30)
+    1000239c:	48 00 00 4c 	b       100023e8 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0x128>
+    100023a0:	e9 3e 00 00 	ld      r9,0(r30)
+    100023a4:	7f c3 f3 78 	mr      r3,r30
+    100023a8:	e9 29 00 10 	ld      r9,16(r9)
+    100023ac:	f8 41 00 28 	std     r2,40(r1)
+    100023b0:	e9 49 00 00 	ld      r10,0(r9)
+    100023b4:	e9 69 00 10 	ld      r11,16(r9)
+    100023b8:	7d 49 03 a6 	mtctr   r10
+    100023bc:	e8 49 00 08 	ld      r2,8(r9)
+    100023c0:	4e 80 04 21 	bctrl
+    100023c4:	e8 41 00 28 	ld      r2,40(r1)
+    100023c8:	7c 20 04 ac 	lwsync
+    100023cc:	39 1e 00 0c 	addi    r8,r30,12
+    100023d0:	7d 20 40 28 	lwarx   r9,0,r8
+    100023d4:	39 49 ff ff 	addi    r10,r9,-1
+    100023d8:	7d 40 41 2d 	stwcx.  r10,0,r8
+    100023dc:	40 a2 ff f4 	bne     100023d0 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0x110>
+    100023e0:	4c 00 01 2c 	isync
+    100023e4:	7d 29 07 b4 	extsw   r9,r9
+    100023e8:	2f 89 00 01 	cmpwi   cr7,r9,1
+    100023ec:	40 9e ff 38 	bne     cr7,10002324 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0x64>
+    100023f0:	e9 3e 00 00 	ld      r9,0(r30)
+    100023f4:	7f c3 f3 78 	mr      r3,r30
+    100023f8:	e9 29 00 18 	ld      r9,24(r9)
+    100023fc:	f8 41 00 28 	std     r2,40(r1)
+    10002400:	e9 49 00 00 	ld      r10,0(r9)
+    10002404:	e9 69 00 10 	ld      r11,16(r9)
+    10002408:	7d 49 03 a6 	mtctr   r10
+    1000240c:	e8 49 00 08 	ld      r2,8(r9)
+    10002410:	4e 80 04 21 	bctrl
+    10002414:	e8 41 00 28 	ld      r2,40(r1)
+    10002418:	4b ff ff 0c 	b       10002324 <._ZNSt6thread5_ImplISt12_Bind_simpleIFPFvvEvEEED0Ev+0x64>
+    1000241c:	00 00 00 00 	.long 0x0
+    10002420:	00 09 00 01 	.long 0x90001
+    10002424:	80 02 00 00 	lwz     r0,0(r2)
+    10002428:	60 00 00 00 	nop
+    1000242c:	60 00 00 00 	nop
+
+0000000010002430 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv>:
+    10002430:	7c 08 02 a6 	mflr    r0
+    10002434:	60 00 00 00 	nop
+    10002438:	e9 22 80 38 	ld      r9,-32712(r2)
+    1000243c:	fb e1 ff f8 	std     r31,-8(r1)
+    10002440:	7c 7f 1b 78 	mr      r31,r3
+    10002444:	2f a9 00 00 	cmpdi   cr7,r9,0
+    10002448:	f8 01 00 10 	std     r0,16(r1)
+    1000244c:	f8 21 ff 81 	stdu    r1,-128(r1)
+    10002450:	41 9e 00 40 	beq     cr7,10002490 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x60>
+    10002454:	7c 20 04 ac 	lwsync
+    10002458:	39 03 00 08 	addi    r8,r3,8
+    1000245c:	7d 20 40 28 	lwarx   r9,0,r8
+    10002460:	39 49 ff ff 	addi    r10,r9,-1
+    10002464:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10002468:	40 a2 ff f4 	bne     1000245c <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x2c>
+    1000246c:	4c 00 01 2c 	isync
+    10002470:	2b 89 00 01 	cmplwi  cr7,r9,1
+    10002474:	41 9e 00 98 	beq     cr7,1000250c <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0xdc>
+    10002478:	38 21 00 80 	addi    r1,r1,128
+    1000247c:	e8 01 00 10 	ld      r0,16(r1)
+    10002480:	eb e1 ff f8 	ld      r31,-8(r1)
+    10002484:	7c 08 03 a6 	mtlr    r0
+    10002488:	4e 80 00 20 	blr
+    1000248c:	60 00 00 00 	nop
+    10002490:	81 23 00 08 	lwz     r9,8(r3)
+    10002494:	2f 89 00 01 	cmpwi   cr7,r9,1
+    10002498:	39 29 ff ff 	addi    r9,r9,-1
+    1000249c:	91 23 00 08 	stw     r9,8(r3)
+    100024a0:	40 9e ff d8 	bne     cr7,10002478 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x48>
+    100024a4:	e9 23 00 00 	ld      r9,0(r3)
+    100024a8:	e9 29 00 10 	ld      r9,16(r9)
+    100024ac:	f8 41 00 28 	std     r2,40(r1)
+    100024b0:	e9 49 00 00 	ld      r10,0(r9)
+    100024b4:	e9 69 00 10 	ld      r11,16(r9)
+    100024b8:	7d 49 03 a6 	mtctr   r10
+    100024bc:	e8 49 00 08 	ld      r2,8(r9)
+    100024c0:	4e 80 04 21 	bctrl
+    100024c4:	e8 41 00 28 	ld      r2,40(r1)
+    100024c8:	81 3f 00 0c 	lwz     r9,12(r31)
+    100024cc:	39 49 ff ff 	addi    r10,r9,-1
+    100024d0:	7d 29 07 b4 	extsw   r9,r9
+    100024d4:	91 5f 00 0c 	stw     r10,12(r31)
+    100024d8:	2f 89 00 01 	cmpwi   cr7,r9,1
+    100024dc:	40 9e ff 9c 	bne     cr7,10002478 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x48>
+    100024e0:	e9 3f 00 00 	ld      r9,0(r31)
+    100024e4:	7f e3 fb 78 	mr      r3,r31
+    100024e8:	e9 29 00 18 	ld      r9,24(r9)
+    100024ec:	f8 41 00 28 	std     r2,40(r1)
+    100024f0:	e9 49 00 00 	ld      r10,0(r9)
+    100024f4:	e9 69 00 10 	ld      r11,16(r9)
+    100024f8:	7d 49 03 a6 	mtctr   r10
+    100024fc:	e8 49 00 08 	ld      r2,8(r9)
+    10002500:	4e 80 04 21 	bctrl
+    10002504:	e8 41 00 28 	ld      r2,40(r1)
+    10002508:	4b ff ff 70 	b       10002478 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x48>
+    1000250c:	e9 3f 00 00 	ld      r9,0(r31)
+    10002510:	7f e3 fb 78 	mr      r3,r31
+    10002514:	e9 29 00 10 	ld      r9,16(r9)
+    10002518:	f8 41 00 28 	std     r2,40(r1)
+    1000251c:	e9 49 00 00 	ld      r10,0(r9)
+    10002520:	e9 69 00 10 	ld      r11,16(r9)
+    10002524:	7d 49 03 a6 	mtctr   r10
+    10002528:	e8 49 00 08 	ld      r2,8(r9)
+    1000252c:	4e 80 04 21 	bctrl
+    10002530:	e8 41 00 28 	ld      r2,40(r1)
+    10002534:	7c 20 04 ac 	lwsync
+    10002538:	39 1f 00 0c 	addi    r8,r31,12
+    1000253c:	7d 20 40 28 	lwarx   r9,0,r8
+    10002540:	39 49 ff ff 	addi    r10,r9,-1
+    10002544:	7d 40 41 2d 	stwcx.  r10,0,r8
+    10002548:	40 a2 ff f4 	bne     1000253c <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0x10c>
+    1000254c:	4c 00 01 2c 	isync
+    10002550:	7d 29 07 b4 	extsw   r9,r9
+    10002554:	4b ff ff 84 	b       100024d8 <._ZNSt16_Sp_counted_baseILN9__gnu_cxx12_Lock_policyE2EE10_M_releaseEv+0xa8>
+    10002558:	00 00 00 00 	.long 0x0
+    1000255c:	00 09 00 01 	.long 0x90001
+    10002560:	80 01 00 00 	lwz     r0,0(r1)
+    10002564:	60 00 00 00 	nop
+    10002568:	60 00 00 00 	nop
+    1000256c:	60 00 00 00 	nop
+
+0000000010002570 <.__libc_csu_init>:
+    10002570:	7c 08 02 a6 	mflr    r0
+    10002574:	fb 41 ff d0 	std     r26,-48(r1)
+    10002578:	fb 61 ff d8 	std     r27,-40(r1)
+    1000257c:	fb 81 ff e0 	std     r28,-32(r1)
+    10002580:	fb a1 ff e8 	std     r29,-24(r1)
+    10002584:	fb c1 ff f0 	std     r30,-16(r1)
+    10002588:	fb e1 ff f8 	std     r31,-8(r1)
+    1000258c:	3f c2 ff ff 	addis   r30,r2,-1
+    10002590:	3f a2 ff ff 	addis   r29,r2,-1
+    10002594:	3b de 7a a0 	addi    r30,r30,31392
+    10002598:	f8 01 00 10 	std     r0,16(r1)
+    1000259c:	3b bd 7a a8 	addi    r29,r29,31400
+    100025a0:	f8 21 ff 61 	stdu    r1,-160(r1)
+    100025a4:	7f be e8 50 	subf    r29,r30,r29
+    100025a8:	7c 7a 1b 78 	mr      r26,r3
+    100025ac:	7c 9b 23 78 	mr      r27,r4
+    100025b0:	7c bc 2b 78 	mr      r28,r5
+    100025b4:	3b de ff f8 	addi    r30,r30,-8
+    100025b8:	3b e0 00 00 	li      r31,0
+    100025bc:	4b ff e5 c1 	bl      10000b7c <._init>
+    100025c0:	60 00 00 00 	nop
+    100025c4:	7f bd 1e 75 	sradi.  r29,r29,3
+    100025c8:	41 82 00 40 	beq     10002608 <.__libc_csu_init+0x98>
+    100025cc:	60 00 00 00 	nop
+    100025d0:	e9 3e 00 09 	ldu     r9,8(r30)
+    100025d4:	f8 41 00 28 	std     r2,40(r1)
+    100025d8:	7f 43 d3 78 	mr      r3,r26
+    100025dc:	7f 64 db 78 	mr      r4,r27
+    100025e0:	7f 85 e3 78 	mr      r5,r28
+    100025e4:	3b ff 00 01 	addi    r31,r31,1
+    100025e8:	e9 49 00 00 	ld      r10,0(r9)
+    100025ec:	e9 69 00 10 	ld      r11,16(r9)
+    100025f0:	7d 49 03 a6 	mtctr   r10
+    100025f4:	e8 49 00 08 	ld      r2,8(r9)
+    100025f8:	4e 80 04 21 	bctrl
+    100025fc:	e8 41 00 28 	ld      r2,40(r1)
+    10002600:	7f bf e8 40 	cmpld   cr7,r31,r29
+    10002604:	40 9e ff cc 	bne     cr7,100025d0 <.__libc_csu_init+0x60>
+    10002608:	38 21 00 a0 	addi    r1,r1,160
+    1000260c:	e8 01 00 10 	ld      r0,16(r1)
+    10002610:	eb 41 ff d0 	ld      r26,-48(r1)
+    10002614:	eb 61 ff d8 	ld      r27,-40(r1)
+    10002618:	eb 81 ff e0 	ld      r28,-32(r1)
+    1000261c:	7c 08 03 a6 	mtlr    r0
+    10002620:	eb a1 ff e8 	ld      r29,-24(r1)
+    10002624:	eb c1 ff f0 	ld      r30,-16(r1)
+    10002628:	eb e1 ff f8 	ld      r31,-8(r1)
+    1000262c:	4e 80 00 20 	blr
+    10002630:	00 00 00 00 	.long 0x0
+    10002634:	00 00 00 01 	.long 0x1
+    10002638:	80 06 00 00 	lwz     r0,0(r6)
+    1000263c:	60 00 00 00 	nop
+
+0000000010002640 <.__libc_csu_fini>:
+    10002640:	4e 80 00 20 	blr
+	...
+    10002654:	00 01 0f 48 	.long 0x10f48
+
+0000000010002658 <__glink_PLTresolve>:
+    10002658:	7d 88 02 a6 	mflr    r12
+    1000265c:	42 9f 00 05 	bcl     20,4*cr7+so,10002660 <__glink_PLTresolve+0x8>
+    10002660:	7d 68 02 a6 	mflr    r11
+    10002664:	e8 4b ff f0 	ld      r2,-16(r11)
+    10002668:	7d 88 03 a6 	mtlr    r12
+    1000266c:	7d 62 5a 14 	add     r11,r2,r11
+    10002670:	e9 8b 00 00 	ld      r12,0(r11)
+    10002674:	e8 4b 00 08 	ld      r2,8(r11)
+    10002678:	7d 89 03 a6 	mtctr   r12
+    1000267c:	e9 6b 00 10 	ld      r11,16(r11)
+    10002680:	4e 80 04 20 	bctr
+    10002684:	60 00 00 00 	nop
+    10002688:	60 00 00 00 	nop
+    1000268c:	60 00 00 00 	nop
+
+0000000010002690 <free@plt>:
+    10002690:	38 00 00 00 	li      r0,0
+    10002694:	4b ff ff c4 	b       10002658 <__glink_PLTresolve>
+
+0000000010002698 <clock_gettime@plt>:
+    10002698:	38 00 00 01 	li      r0,1
+    1000269c:	4b ff ff bc 	b       10002658 <__glink_PLTresolve>
+
+00000000100026a0 <__gmon_start__@plt>:
+    100026a0:	38 00 00 02 	li      r0,2
+    100026a4:	4b ff ff b4 	b       10002658 <__glink_PLTresolve>
+
+00000000100026a8 <_ZdlPv@plt>:
+    100026a8:	38 00 00 03 	li      r0,3
+    100026ac:	4b ff ff ac 	b       10002658 <__glink_PLTresolve>
+
+00000000100026b0 <abort@plt>:
+    100026b0:	38 00 00 04 	li      r0,4
+    100026b4:	4b ff ff a4 	b       10002658 <__glink_PLTresolve>
+
+00000000100026b8 <_ZNSt6thread15_M_start_threadESt10shared_ptrINS_10_Impl_baseEE@plt>:
+    100026b8:	38 00 00 05 	li      r0,5
+    100026bc:	4b ff ff 9c 	b       10002658 <__glink_PLTresolve>
+
+00000000100026c0 <sched_yield@plt>:
+    100026c0:	38 00 00 06 	li      r0,6
+    100026c4:	4b ff ff 94 	b       10002658 <__glink_PLTresolve>
+
+00000000100026c8 <calloc@plt>:
+    100026c8:	38 00 00 07 	li      r0,7
+    100026cc:	4b ff ff 8c 	b       10002658 <__glink_PLTresolve>
+
+00000000100026d0 <memset@plt>:
+    100026d0:	38 00 00 08 	li      r0,8
+    100026d4:	4b ff ff 84 	b       10002658 <__glink_PLTresolve>
+
+00000000100026d8 <_ZNSt6thread4joinEv@plt>:
+    100026d8:	38 00 00 09 	li      r0,9
+    100026dc:	4b ff ff 7c 	b       10002658 <__glink_PLTresolve>
+
+00000000100026e0 <_ZSt9terminatev@plt>:
+    100026e0:	38 00 00 0a 	li      r0,10
+    100026e4:	4b ff ff 74 	b       10002658 <__glink_PLTresolve>
+
+00000000100026e8 <puts@plt>:
+    100026e8:	38 00 00 0b 	li      r0,11
+    100026ec:	4b ff ff 6c 	b       10002658 <__glink_PLTresolve>
+
+00000000100026f0 <printf@plt>:
+    100026f0:	38 00 00 0c 	li      r0,12
+    100026f4:	4b ff ff 64 	b       10002658 <__glink_PLTresolve>
+
+00000000100026f8 <fprintf@plt>:
+    100026f8:	38 00 00 0d 	li      r0,13
+    100026fc:	4b ff ff 5c 	b       10002658 <__glink_PLTresolve>
+
+0000000010002700 <strcmp@plt>:
+    10002700:	38 00 00 0e 	li      r0,14
+    10002704:	4b ff ff 54 	b       10002658 <__glink_PLTresolve>
+
+0000000010002708 <fwrite@plt>:
+    10002708:	38 00 00 0f 	li      r0,15
+    1000270c:	4b ff ff 4c 	b       10002658 <__glink_PLTresolve>
+
+0000000010002710 <_Znwm@plt>:
+    10002710:	38 00 00 10 	li      r0,16
+    10002714:	4b ff ff 44 	b       10002658 <__glink_PLTresolve>
+
+0000000010002718 <_Unwind_Resume@plt>:
+    10002718:	38 00 00 11 	li      r0,17
+    1000271c:	4b ff ff 3c 	b       10002658 <__glink_PLTresolve>
+
+0000000010002720 <__libc_start_main@plt>:
+    10002720:	38 00 00 12 	li      r0,18
+    10002724:	4b ff ff 34 	b       10002658 <__glink_PLTresolve>
+
+Disassembly of section .fini:
+
+0000000010002728 <._fini>:
+    10002728:	7c 08 02 a6 	mflr    r0
+    1000272c:	f8 01 00 10 	std     r0,16(r1)
+    10002730:	f8 21 ff 91 	stdu    r1,-112(r1)
+    10002734:	38 21 00 70 	addi    r1,r1,112
+    10002738:	e8 01 00 10 	ld      r0,16(r1)
+    1000273c:	7c 08 03 a6 	mtlr    r0
+    10002740:	4e 80 00 20 	blr

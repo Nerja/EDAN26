@@ -29,7 +29,7 @@ class spin_lock {
 		{
 			bool expected = false;
 			//while(flag.test_and_set(std::memory_order_acquire));
-			while(!atomic_compare_exchange_weak_explicit(&flag, &expected, true, std::memory_order_acquire, std::memory_order_acquire)){
+			while(!atomic_compare_exchange_weak_explicit(&flag, &expected, true, std::memory_order_acquire, std::memory_order_relaxed)){
 				expected = false;
 				while(flag);
 			}
@@ -210,10 +210,10 @@ int main(void)
 			fprintf(stderr, "wrong output!\n");
 			abort();
 		}
-		//printf("T = %1.2lf s\n", end - begin);
+		printf("T = %1.2lf s\n", end - begin);
 		total_time += (end - begin);
 	}
-	printf("dT = %1.2lf s\n", total_time / nbr_measurements);
+	printf("mean(T) = %1.2lf s\n", total_time / nbr_measurements);
 
 	delete worklist;
 

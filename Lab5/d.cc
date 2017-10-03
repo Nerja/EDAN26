@@ -199,10 +199,10 @@ int main(void)
 			abort();
 		}
 
-		//printf("T = %1.2lf s\n", end - begin);
+		printf("T = %1.2lf s\n", end - begin);
 		total_time += (end - begin);
 	}
-	printf("dT = %1.2lf s\n", total_time / nbr_measurements);
+	printf("mean(T) = %1.2lf s\n", total_time / nbr_measurements);
 
 	delete worklist;
 
