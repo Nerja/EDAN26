@@ -172,13 +172,26 @@ static integer c__3 = 3;
 L90:
     ++ncycle;
 
+
+    #pragma omp sections
+    {
+      #pragma omp section
+      {
+        calc1_();
+      }
+      #pragma omp section
+      {
+        calc2_();
+      }
+    }
+
 /*     COMPUTE CAPITAL  U, CAPITAL V, Z AND H */
 
-    calc1_();
+
 
 /*     COMPUTE NEW VALUES U,V AND P */
 
-    calc2_();
+
 
     time += cons_1.dt;
     if (ncycle % cons_1.mprint != 0) {
