@@ -232,13 +232,19 @@ L90:
 		    abs(d__1));
 	    ucheck += (d__1 = _BLNK__1.unew[icheck + jcheck * 1335 - 1336],
 		    abs(d__1));
-	    vcheck += (d__1 = _BLNK__1.vnew[icheck + jcheck * 1335 - 1336],
-		    abs(d__1));
 /* L4500: */
 	}
 	_BLNK__1.unew[icheck + icheck * 1335 - 1336] *= icheck % 100 / 100.f;
 /* L3500: */
     }
+
+    #pragma omp parallel for reduction(+:vcheck)
+    for (icheck = 1; icheck <= i__1; ++icheck) {
+	i__2 = mnmin;
+	for (jcheck = 1; jcheck <= i__2; ++jcheck) {
+    vcheck += (d__1 = _BLNK__1.vnew[icheck + jcheck * 1335 - 1336],
+      abs(d__1));
+    }}
 
     // *********************************************
 /* *** */
