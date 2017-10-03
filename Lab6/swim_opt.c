@@ -434,6 +434,7 @@ L370:
     #pragma omp parallel for
     for (j = 1; j <= i__1; ++j) {
 	i__2 = cons_1.m;
+  #pragma omp parallel for
 	for (i__ = 1; i__ <= i__2; ++i__) {
 	    _BLNK__1.cu[i__ + 1 + j * 1335 - 1336] = (_BLNK__1.p[i__ + 1 + j *
 		     1335 - 1336] + _BLNK__1.p[i__ + j * 1335 - 1336]) * .5 *
