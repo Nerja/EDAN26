@@ -34,3 +34,5 @@ script:
   - make
   - cd ../Lab5
   - make
+  - cd ../Proj
+  - make
